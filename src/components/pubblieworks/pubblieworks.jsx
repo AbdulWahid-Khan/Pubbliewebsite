@@ -57,12 +57,8 @@ const Pubblieworks = () => {
             <div className="centralportion w-full flex relative overflow-x-hidden h-[800px] ">
               <div className="  relative  w-full overflow-x-hidden overflow-y-hidden -top-[100px] ">
                 <div className="main bg-white flex w-[593px] h-[147px] relative items-center  left-[830px] top-[150px] rounded-[26px]">
-                  <div className="leftcontent absolute -right-3 w-[123px] w-[200px]">
-                    <img
-                      src={pubblihand}
-                      alt=""
-                      className=" w-[123px] w-[200px]"
-                    />
+                  <div className="leftcontent absolute -right-3 w-[123px] ">
+                    <img src={pubblihand} alt="" className=" w-[123px] " />
                   </div>
                   <div className="text gap-2 pl-[30px] items-center w-[360px] ">
                     <p className="text-lg text-black font-inter font-bold">
@@ -92,11 +88,11 @@ const Pubblieworks = () => {
                   </div>
                 </div>
                 <div className="main bg-white flex w-[593px] h-[147px] relative items-center left-[830px] top-[450px] rounded-[26px]">
-                  <div className="leftcontent absolute -right-3 w-[123px] w-[200px]">
+                  <div className="leftcontent absolute -right-3 w-[123px] h-[200px]">
                     <img
                       src={pubblielaptop}
                       alt=""
-                      className=" w-[123px] w-[200px]"
+                      className=" w-[123px] h-[200px]"
                     />
                   </div>
                   <div className="text gap-2 pl-[30px] items-center w-[360px] ">

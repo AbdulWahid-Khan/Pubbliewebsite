@@ -126,6 +126,50 @@ const Faqsection = () => {
       id: 12,
       text: "COLLABORATION",
     },
+    {
+      id: 13,
+      text: "EDUCATION",
+    },
+    {
+      id: 14,
+      text: "COMMUNICATION",
+    },
+    {
+      id: 15,
+      text: "MEETINGS",
+    },
+    {
+      id: 16,
+      text: "DISCUSSION",
+    },
+    {
+      id: 17,
+      text: "LEADERSHIP",
+    },
+    {
+      id: 18,
+      text: "COLLABORATION",
+    },
+    {
+      id: 19,
+      text: "EDUCATION",
+    },
+    {
+      id: 20,
+      text: "COMMUNICATION",
+    },
+    {
+      id: 21,
+      text: "MEETINGS",
+    },
+    {
+      id: 22,
+      text: "DISCUSSION",
+    },
+    {
+      id: 23,
+      text: "LEADERSHIP",
+    },
   ];
   return (
     <>
@@ -143,7 +187,7 @@ const Faqsection = () => {
           />
         </div>
         <Marquee>
-          <div className="navouter absolute z-20 top-0 w-full  rotate-z-1  flex  min-h-[60px] gap-[41px] overflow-x-hidden bg-[#CCE2FF] .marquee-content">
+          {/* <div className="navouter absolute z-20 top-0 w-full  rotate-z-1  flex  min-h-[60px] gap-[41px] overflow-x-hidden bg-[#CCE2FF] marquee-content overflow-hidden">
             {Navdata.map((item, index) => (
               <ul key={index} className="nav flex items-center">
                 <li className="text p-2.5 flex gap-2.5 items-center">
@@ -158,9 +202,16 @@ const Faqsection = () => {
                 </li>
               </ul>
             ))}
-          </div>
+          </div> */}
+          <p>* 8</p>
+          <p>* 8</p>
+          <p>* 8</p>
+          <p>* 8</p>
+          <p>* 8</p>
+          <p>* 8</p>
+          <p>* 8</p>
         </Marquee>
-        <div className="navodown z-20 absolute top-0 w-full -rotate-z-1 flex  min-h-[60px] gap-[41px] overflow-x-hidden bg-[#CCE2FF]   ">
+        {/* <div className="navodown z-20 absolute top-0 w-full -rotate-z-1 flex  min-h-[60px] gap-[41px] overflow-x-hidden bg-[#CCE2FF]   ">
           {Navdata.map((item, index) => (
             <ul key={index} className="nav flex items-center">
               <li className="text p-2.5 flex gap-2.5 items-center">
@@ -175,7 +226,7 @@ const Faqsection = () => {
               </li>
             </ul>
           ))}
-        </div>
+        </div> */}
         <img
           src={topflower}
           alt=""

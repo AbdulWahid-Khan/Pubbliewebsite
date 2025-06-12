@@ -123,9 +123,10 @@
   overflow: hidden;
   white-space: nowrap;
   display: flex;
+  width: 100%;
 }
 
-.marquee-content {
+/* .marquee-content {
   display: inline-flex;
   animation: marquee 10s linear infinite;
 }
@@ -137,20 +138,22 @@
   100% {
     transform: translatex(-100%);
   }
-}
+} */
 
 
 /* .navodown {
-  display: inline-flex;
-  animation: marquee2 20s linear infinite;
+ overflow: hidden;
+  display: flex;
+  width: 200%;
+  animation: marquee2 10s linear infinite;
 }
 
 @keyframes marquee2 {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(-50%);
   }
 } */
 
