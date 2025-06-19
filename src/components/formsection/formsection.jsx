@@ -20,8 +20,8 @@ import pubbliewhite from "./../../assets/images/pubbliewhite.svg";
 const Formsection = () => {
   return (
     <>
-      <div className="main px-[60px]  gap-[21px]  flex bg-[#f7f7f7] justify-center">
-        <div className="leftcontent w-[689px] pt-[31px] px-[30px] pb-[20px] bg-white rounded-[22px]">
+      <div className="main px-[60px]  gap-[21px]  flex bg-[#f7f7f7] justify-center pb-[56px] items-start">
+        <div className="leftcontent bg-white w-[689px] pt-[31px] px-[30px] pb-[46px]  rounded-[22px] mb-[26px]">
           <div className="header ">
             <p className="text-Primary text-lg font-bold font-inter ">
               Get in touch
@@ -82,7 +82,7 @@ const Formsection = () => {
           <div className="radio button">
             <label htmlFor="radio" className="flex">
               {" "}
-              <input type="radio" className=" pr-4" />{" "}
+              <input type="radio" className=" pr-4 hover:cursor-pointer" />{" "}
               <p className="pl-4">
                 {" "}
                 I agree to our friendly{" "}
@@ -103,8 +103,8 @@ const Formsection = () => {
           </div>
         </div>
 
-        <div className="rightcontentent w-[610px] h-[710px]	bg-[#FDFDFD]  pb-[26px]">
-          <div className="images relative w-[610px] h-[397px] overflow-hidden rounded-[22px]">
+        <div className="rightcontentent w-[610px] h-[710px]	bg-[#f7f7f7]  flex flex-col gap-4 rounded-[22px]">
+          <div className="images relative w-[610px] h-[397px] overflow-hidden rounded-[22px] hidden xl:block">
             <div className="bgcolor bg-[#006EFF] blur-[200px] w-[484px] h-[242px] absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 "></div>
 
             <img
@@ -123,8 +123,9 @@ const Formsection = () => {
               className="absolute right-0 bottom-0 w-[176px] h-[176px]"
             />
           </div>
+          <div className="subportion bg-white w-[610px] w-[291px] ">
           <div className="contactpart pl-5">
-            <div className="mailcontent flex  gap-6 items-center pt-[42px] ">
+            <div className="mailcontent flex  gap-6 items-center pt-[42px] hidden xl:block ">
               <div className="mail w-[60px] h-[60px] p-3.5 bg-[rgba(50,139,255,0.16)] rounded-full">
                 <FaRegEnvelope className="text-Primary w-[32px] h-[32px] " />
               </div>
@@ -137,22 +138,24 @@ const Formsection = () => {
             </div>
           </div>
 
-          <div className="mailcontent flex  gap-6 items-center pt-3 pl-5">
-            <div className="mail w-[60px] h-[60px] p-3.5 bg-[rgba(50,139,255,0.16)] rounded-full">
+          <div className="mailcontent flex  gap-4 items-center pt-3 pl-5 hidden xl:block">
+            <div className="mail w-[60px] h-[60px] p-3.5 bg-[rgba(50,139,255,0.16)] rounded-full ">
               <IoCallOutline className="text-Primary w-[32px] h-[32px]" />
             </div>
-            <div className="maintext flex flex-col gap-1.5">
+            <div className="maintext flex flex-col gap-1.5 hidden xl:block">
               <p className="text-base font-medium font-inter ">Phone</p>
               <p className="text-base font-normal font-inter text-Darkgrey ">
                 (02520)43568901
               </p>
             </div>
-          </div>
-          <div className="iocns flex justify-center gap-6 items-center pt-[35px] ">
+             <div className=" iocns flex justify-center gap-6 items-center pt-[20px] hidden xl:flex">
             <img src={facebook} alt="" />
             <img src={linkdin} alt="" />
             <img src={instragram} alt="" />
           </div>
+          </div>
+          </div>
+         
         </div>
       </div>
       <div className="bottom bg-[#010C1B] pb-6  overflow-hidden flex flex-col relative justify-center items-center bg-grey pt-[30px] px-[60px]  ">

@@ -1,5 +1,5 @@
 import React from "react";
-import doticon from "./../../assets/images/doticon.svg";
+
 import lefttopspiral from "./../../assets/images/publicspiral.svg";
 import rifhtbottomspiral from "./../../assets/images/publicleftspiral.svg";
 import pubblihand from "./../../assets/images/pubblihand.svg";
@@ -16,38 +16,25 @@ const Pubblieworks = () => {
   return (
     <>
       <div>
-        <div className="controlling ">
-          <div className="parent relative">
-            {/* thid images create the rpoblem overflow */}
-            {/* <img
-            src={elipsright}
-            alt=""
-            className="absolute right-0 -top-[400px] "
-          />
-          <img src={elipsleft} alt="" className="absolute  left-0  " /> */}
-            <div className="main flex justify-center  w-full">
-              <div className="button w-[248px] h-[61px] rounded-[39px] flex items-center bg-white pl-4 -mt-[30px]">
-                <img
-                  src={doticon}
-                  alt=""
-                  className="w-[9px] h-[9px] mr-[53px]"
-                />
-                <button className="text-base text-Primary font-medium w-[] py-5 text-center ">
-                  Get Strated{" "}
-                </button>
-              </div>
-            </div>
-
+        <div className="controlling overflow-hidden">
+          <div className="parent relative ">
+            
+            
+<div className="bg-[#3579F6]   w-[1026px] h-[637px]  absolute -right-[200px] blur-[200px]  opacity-40   rounded-[75%] overflow-hidden  ">
+ </div>
+ <div className="bg-[#3579F6]   w-[1026px] h-[637px]  absolute -left-[150px] bottom-[200px] blur-[200px]  opacity-40   rounded-[75%] overflow-hidden  ">
+ </div>
+               
             <div className=" content flex w-full h-[202px]  ">
               <div className="firstrow  ">
                 <img src={lefttopspiral} alt="" />
               </div>
               <div className="flex w-full items-center justify-center pt-[50px]">
-                <div className="text gap-4 text-center">
-                  <p className="text-black text-5xl font-bold font-inter">
+                <div className="text gap-4 ">
+                  <p className="text-black text-5xl font-bold font-inter text-center">
                     How PUBBLI Works
                   </p>
-                  <p className="text-black text-[20px] font-inter ">
+                  <p className="text-black text-[20px] font-inter text-center">
                     Streamline your campaign journey in three simple steps.
                   </p>
                 </div>
@@ -56,11 +43,12 @@ const Pubblieworks = () => {
 
             <div className="centralportion w-full flex relative overflow-x-hidden h-[800px] ">
               <div className="  relative  w-full overflow-x-hidden overflow-y-hidden -top-[100px] ">
-                <div className="main bg-white flex w-[593px] h-[147px] relative items-center  left-[830px] top-[150px] rounded-[26px]">
-                  <div className="leftcontent absolute -right-3 w-[123px] ">
+                
+                <div className="main  flex 2xl:max-w-[593px] xl:max-h-[147px] w-full h-full relative items-center  left-[830px] top-[150px] rounded-[26px] bg-white">
+                  <div className="leftcontent absolute -right-3 max-w-[123px] ">
                     <img src={pubblihand} alt="" className=" w-[123px] " />
                   </div>
-                  <div className="text gap-2 pl-[30px] items-center w-[360px] ">
+                  <div className="text gap-2 pl-[30px] items-center max-w-[360px] w-full ">
                     <p className="text-lg text-black font-inter font-bold">
                       Create Your Campaign
                     </p>
@@ -70,6 +58,7 @@ const Pubblieworks = () => {
                     </p>
                   </div>
                 </div>
+                
                 <div className="main bg-white  flex w-[593px] h-[147px]    items-center absolute left-[350px] top-[350px] rounded-[26px]">
                   <div className="leftcontent absolute -right-5 w-[178px] w-[233px]">
                     <img

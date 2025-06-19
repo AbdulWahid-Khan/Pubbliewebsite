@@ -6,6 +6,7 @@ import cardiocn4 from "./../../assets/images/cardiocn4.svg";
 import angulartoppic from "./../../assets/images/angularleftblue.svg";
 import angularbottompic from "./../../assets/images/angularbottomblue.svg";
 import updatedbgblue from "./../../assets/images/updatedbgbluepic.svg";
+import doticon from "./../../assets/images/doticon.svg";
 const About = () => {
   const Card = [
     {
@@ -36,7 +37,8 @@ const About = () => {
   return (
     <>
       <div className="outer">
-        <div className="relative overflow-hidden heading flex flex-col w-full items-end gap-5  bg-[#11243E] py-[82px]">
+        <div>
+        <div className="relative overflow-hidden heading flex flex-col w-full items-end  gap-5  bg-[#11243E] py-[82px] ">
           <img
             src={updatedbgblue}
             alt=""
@@ -47,8 +49,8 @@ const About = () => {
             alt=""
             className="absolute bottom-0 right-0 w-[381px] h-[381px] "
           />
-          <div className="text pr-[60px] text-end">
-            <p className="text-[44px] font-bold font-family-inter bg-[linear-gradient(90deg,rgba(255,255,255,0.7)_0%,#8BBFFF_100%)] text-transparent bg-clip-text">
+          <div className="text pr-[60px]  z-10 text-end">
+            <p className="text-[44px]  font-bold font-family-inter bg-[linear-gradient(90deg,rgba(255,255,255,0.7)_0%,#8BBFFF_100%)] text-transparent bg-clip-text">
               What makes Pubblie different
             </p>
             <p className="font-inter text-[20px] bg-[linear-gradient(90deg,rgba(255,255,255,0.7)_0%,#8BBFFF_100%)] text-transparent bg-clip-text ">
@@ -56,22 +58,35 @@ const About = () => {
               for unparalleled success.
             </p>
           </div>
-          <div className="container pt-[100px] flex justify-start items-center gap-4 pl-[60px]   ">
-            {Card.map((card) => (
-              <div className="card py-5 px-4 rounded-[25px] w-[228px] h-[326px] flex flex-col items-center justify-center  skew-x-5 border-[0.4px] border-[rgba(255,255,255,0.18)] shadow-[-4px_-4px_4px_0px_rgba(72,72,72,0.25)] ">
-                <div className="pic flex justify-center items-center w-[73px] h-[73px] rounded-full p-4  bg-[rgba(255,255,255,0.12)] shadow-[-4.5px_-4.5px_4.5px_0px_rgba(72,72,72,0.25)]">
-                  <img src={card.img} alt="" />
-                </div>
-                <p className="font-inter font-bold text-lg text-white text-center">
-                  {card.title}
-                </p>
-                <p className="font-inter text-white text-base text-center">
-                  {card.text}
-                </p>
-              </div>
-            ))}
-          </div>
+
+          <div className="flex w-full  justify-start pl-[60px]">
+          <div className=" flex grid   gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 max-w-[957px] w-full">
+  {Card.map((card) => (
+    <div className="card py-5 px-4 rounded-[25px] w-[228px] h-[326px] flex flex-col items-center justify-center skew-x-5 border-[0.4px] border-[rgba(255,255,255,0.18)] shadow-[-4px_-4px_4px_0px_rgba(72,72,72,0.25)] ">
+      <div className="pic flex justify-center items-center w-[73px] h-[73px] rounded-full p-4 bg-[rgba(255,255,255,0.12)] shadow-[-4.5px_-4.5px_4.5px_0px_rgba(72,72,72,0.25)]">
+        <img src={card.img} alt="" />
+      </div>
+      <p className="font-inter font-bold text-lg text-white text-center">{card.title}</p>
+      <p className="font-inter text-white text-base text-center">{card.text}</p>
+    </div>
+  ))}
+</div>
+
+</div>
         </div>
+        </div>
+        <div className="main flex justify-center  bg-red-200">
+                      <div className="button w-[248px] h-[61px] rounded-[39px] flex items-center bg-white pl-4 -mt-[30px] absolute left-[50%] -translate-x-[50%] ">
+                        <img
+                          src={doticon}
+                          alt=""
+                          className="w-[9px] h-[9px] mr-[53px] "
+                        />
+                        <button className="text-base text-Primary font-medium py-5 text-center ">
+                          Get Started{" "}
+                        </button>
+                      </div>
+                    </div>
       </div>
     </>
   );

@@ -65,7 +65,7 @@ const Carddetails = () => {
         <div className="red pl-[377px] pt-[80px]">
           <img src={reddivpic} alt="" />
         </div>
-        <div className="cards flex p-3 gap-4 mt.5">
+        <div className="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6  p-3 gap-4 mt.5">
           {Carddata.map((item) => (
             <div className="card w-[220px] h-[292px]  felx flex-col p-1  mx-auto ">
               <div className="w-[210px] h-[150px] rounded-t-[20px] overflow-hidden">
@@ -95,7 +95,7 @@ const Carddetails = () => {
         </div>
 
         <div className="bottomteext">
-          <p className="text-base font-inter w-[666px] text-center mx-auto">
+          <p className="text-base font-inter max-w-[666px] w-full text-center mx-auto ">
             Join thousands of satisfied users revolutionizing their campaigns
             with PUBBLI, the platform for seamless collaboration and measurable
             success.
