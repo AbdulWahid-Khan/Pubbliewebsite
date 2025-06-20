@@ -20,22 +20,22 @@ import pubbliewhite from "./../../assets/images/pubbliewhite.svg";
 const Formsection = () => {
   return (
     <>
-      <div className="main px-[60px]  gap-[21px]  flex bg-[#f7f7f7] justify-center pb-[56px] items-start">
-        <div className="leftcontent bg-white w-[689px] pt-[31px] px-[30px] pb-[46px]  rounded-[22px] mb-[26px]">
+      <div className="main  flex flex-col md:flex md:flex-row  md:px-[60px]  gap-[21px]   bg-[#f7f7f7] justify-center  items-start pt-7 pb-[18px] ">
+        <div className="leftcontent bg-white  max-w-[689px] w-full pt-[31px] px-[30px]  md:pb-[46px]  rounded-[22px] mb-[26px]">
           <div className="header ">
             <p className="text-Primary text-lg font-bold font-inter ">
               Get in touch
             </p>
-            <h3 className="text-[32px] font-bold font-inter">
+            <h3 className="text-sm md:text-[32px] font-bold font-inter">
               Let's Chat , Reach Out to Us
             </h3>
           </div>
 
-          <p className="text-base font-inter w-[604px] font-normal pt-[42px]">
+          <p className="text-base font-inter max-w-[604px] w-full font-normal pt-[22px] xl:pt-[42px]">
             have questions or feedback? we’re here to help. Send us a message ,
             and we’ll respond within 24 hours.
           </p>
-          <div className="input flex gap-5 pt-[42px] ">
+          <div className=" input flex gap-5 pt-[42px] flex flex-col lg:flex-row">
             <label htmlFor="firstname text-sm font-medium">
               First name
               <input
@@ -56,7 +56,7 @@ const Formsection = () => {
               />
             </label>
           </div>
-          <div className="email">
+          <div className="email ">
             <label htmlFor="email" className="text-sm font-inter font-medium">
               Email
               <input
@@ -66,7 +66,7 @@ const Formsection = () => {
               />
             </label>
           </div>
-          <div className="textarea">
+          <div className="textarea  h-[100px] md:h-full w-full">
             <label
               htmlFor="textarea"
               className="text-sm font-inter font-medium ]"
@@ -74,12 +74,12 @@ const Formsection = () => {
               Message
               <textarea
                 type="textarea"
-                className="pl-3 py-4  outline-none w-full text-sm font-inter min-h-[170px]"
+                className="pl-3 pt-4  outline-none w-full text-sm font-inter min-h-[170px]"
                 placeholder="Enter your message"
               />
             </label>
           </div>
-          <div className="radio button">
+          <div className="radio button ">
             <label htmlFor="radio" className="flex">
               {" "}
               <input type="radio" className=" pr-4 hover:cursor-pointer" />{" "}
@@ -90,7 +90,7 @@ const Formsection = () => {
               </p>
             </label>
           </div>
-          <div className="buttoncontrolls flex justify-end items-center pt-[42px]">
+          <div className="buttoncontrolls flex justify-center md:justify-end items-center pt-[42px] b">
             <div className="button relative flex justify-between items-center  w-[173px] h-full">
               <button className="absolute left-0 bg-Primary max-w-[120px] h-[52px] w-full  rounded-full text-lg text-white font-Dmsans">
                 Submit
@@ -103,29 +103,29 @@ const Formsection = () => {
           </div>
         </div>
 
-        <div className="rightcontentent w-[610px] h-[710px]	bg-[#f7f7f7]  flex flex-col gap-4 rounded-[22px]">
-          <div className="images relative w-[610px] h-[397px] overflow-hidden rounded-[22px] hidden xl:block">
-            <div className="bgcolor bg-[#006EFF] blur-[200px] w-[484px] h-[242px] absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 "></div>
+        <div className="rightcontenten  max-w-[610px] h-[620px] xl:h-[710px]   w-full	bg-[#f7f7f7]  flex flex-col gap-4 rounded-[22px]  ">
+          <div className="images relative overflow-hidden w-[300px]  w-full h-full xl:max-w-[610px] xl:max-h-[397px]  w-full  rounded-[22px]  ">
+            <div className="bgcolor bg-Navyblue blur-[100px] w-[200px] h-full xl:max-w-[484px] xl:max-h-[242px] absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 "></div>
 
             <img
               src={lefttopballoon}
               alt=""
-              className="absolute left-0 top-0 w-[176px] h-[176px]"
+              className="absolute left-0 top-0 xl:w-[176px] xl:h-[176px] w-[120px] h-[120px] z-20"
             />
             <img
               src={personpic}
               alt=""
-              className="w-[472px] h-[397px] absolute top-0 left-1/2 -translate-x-1/2 "
+              className=" xl:w-[472px] xl:h-[397px] w-[300px] absolute left-0 top-1/2 -translate-y-1/2 z-10 rounded-[22px] object-cover"
             />
             <img
               src={righttopballoon}
               alt=""
-              className="absolute right-0 bottom-0 w-[176px] h-[176px]"
+              className="absolute right-0 bottom-0 xl:w-[176px] xl:h-[176px] w-[120px] h-[120px] z-20"
             />
           </div>
-          <div className="subportion bg-white w-[610px] w-[291px] ">
-          <div className="contactpart pl-5">
-            <div className="mailcontent flex  gap-6 items-center pt-[42px] hidden xl:block ">
+          <div className="subportion max-w-[610px] w-full max-h-[291px]  ">
+          <div className="contactpart pl-5 ">
+            <div className="mailcontent flex flex-row  gap-6 items-center xl:pt-[22px]  ">
               <div className="mail w-[60px] h-[60px] p-3.5 bg-[rgba(50,139,255,0.16)] rounded-full">
                 <FaRegEnvelope className="text-Primary w-[32px] h-[32px] " />
               </div>
@@ -138,27 +138,28 @@ const Formsection = () => {
             </div>
           </div>
 
-          <div className="mailcontent flex  gap-4 items-center pt-3 pl-5 hidden xl:block">
+          <div className="callcontent flex   gap-4 items-center pt-3 pl-5">
             <div className="mail w-[60px] h-[60px] p-3.5 bg-[rgba(50,139,255,0.16)] rounded-full ">
               <IoCallOutline className="text-Primary w-[32px] h-[32px]" />
             </div>
-            <div className="maintext flex flex-col gap-1.5 hidden xl:block">
+            <div className="maintext flex flex-col gap-1.5  xl:block">
               <p className="text-base font-medium font-inter ">Phone</p>
               <p className="text-base font-normal font-inter text-Darkgrey ">
                 (02520)43568901
               </p>
             </div>
-             <div className=" iocns flex justify-center gap-6 items-center pt-[20px] hidden xl:flex">
+             
+          </div>
+          
+          </div>
+         <div className=" iocns flex justify-center gap-6 items-center xl:pt-[20px]  xl:flex">
             <img src={facebook} alt="" />
             <img src={linkdin} alt="" />
             <img src={instragram} alt="" />
           </div>
-          </div>
-          </div>
-         
         </div>
       </div>
-      <div className="bottom bg-[#010C1B] pb-6  overflow-hidden flex flex-col relative justify-center items-center bg-grey pt-[30px] px-[60px]  ">
+      <div className="bottom bg-[#010C1B] pb-6 mt-[60px] overflow-hidden flex flex-col relative justify-center items-center bg-grey pt-[30px] px-[60px]  ">
         <div className="pubblieiocn flex gap-4 pb-3.5">
           <img src={Pubblieicon} alt="" className="w-[29px] h-[34px]" />
           <img src={pubbliewhite} alt="" className="w-[75px] h-[26px] " />
@@ -176,8 +177,9 @@ const Formsection = () => {
             <img src={linkedicon} alt="" className="w-[24px] h-[24px]" />
           </div>
         </div>
-        <div className="bg  w-[1000px] h-[124px] bg-Primary  blur-[200px] absolute top-0 left-1/2 -translate-x-1/2 rounded-[50%] "></div>
+        <div className="bg  w-[831px] h-[124px] bg-Primary  blur-[200px] absolute top-0 left-1/2 -translate-x-1/2 rounded-[50%] "></div>
       </div>
+     
     </>
   );
 };

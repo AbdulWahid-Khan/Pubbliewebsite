@@ -49,6 +49,18 @@ const Carddetails = () => {
       title: "Marques Loffy",
       text: "“Track performance & refine campaigns with analytics”",
     },
+    {
+      id: 7,
+      img: video3,
+      title: "Palo Tate",
+      text: "“Track performance & refine campaigns with analytics”",
+    },
+    {
+      id: 8,
+      img: video1,
+      title: "Andrew Tate",
+      text: "“Track performance & refine campaigns with analytics”",
+    },
   ];
 
   return (
@@ -62,17 +74,22 @@ const Carddetails = () => {
             See How PUBBLI Transforms Campaigns
           </p>
         </div>
-        <div className="red pl-[377px] pt-[80px]">
+        <div className="red pl-[377px] pt-[80px] mb-1">
           <img src={reddivpic} alt="" />
         </div>
-        <div className="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6  p-3 gap-4 mt.5">
+        <div className="cards bg-[rgb(244,244,244)] grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-8  py-3.5 px-5.5 gap-4 mt.5 ">
           {Carddata.map((item) => (
-            <div className="card w-[220px] h-[292px]  felx flex-col p-1  mx-auto ">
-              <div className="w-[210px] h-[150px] rounded-t-[20px] overflow-hidden">
+            <div className="card w-[220px] h-[292px]  felx flex-col p-1  mx-auto bg-white">
+              <div className="w-[210px] h-[150px] rounded-t-[20px] overflow-hidden relative">
                 <video
                   src={item.img}
                   className="w-full h-full object-cover"
-                ></video>
+                >
+                  
+                </video>
+                <div className="timingsec px-2 py-1 absolute top-1 right-1 rounded-[21px] z-20 bg-black opacity-50">
+                    <p className="text-sm text-white font-inter ">0:29</p>
+                  </div>
               </div>
               <div className="content flex flex-col pt-3 gap-2">
                 <p className="font-bold font-inter text-base text-black">
@@ -90,7 +107,7 @@ const Carddetails = () => {
             </div>
           ))}
         </div>
-        <div className="red max-w-[1500px] w-full flex justify-end">
+        <div className="red max-w-[1500px] w-full flex justify-end mt-1">
           <img src={greedivpic} alt="" />
         </div>
 
@@ -101,7 +118,7 @@ const Carddetails = () => {
             success.
           </p>
           <div className="buut group flex items-center border border-Primary rounded-full w-[280px] pl-4 mx-auto mt-7 hover:bg-Navyblue transition duration-800">
-            <img src={doticon} alt="" className="w-4 h-4 group-hover:hidden " />
+            <div  alt="" className="w-4 h-4 bg-Navyblue group-hover:hidden rounded-full" />
             <button className="flex items-center py-5 justify-center mx-auto gap-2">
               <p className="text-base font-medium font-inter text-Navyblue group-hover:text-white">
                 Join Us Now

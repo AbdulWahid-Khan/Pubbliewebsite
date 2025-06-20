@@ -11,6 +11,7 @@ import text2 from "./../../assets/images/text2.svg";
 import text3 from "./../../assets/images/text3.svg";
 import elipsright from "./../../assets/images/elipsright.svg";
 import elipsleft from "./../../assets/images/elipsleft.svg";
+import Carddetails from "../cards/Carddetails";
 
 const Pubblieworks = () => {
   return (
@@ -20,9 +21,9 @@ const Pubblieworks = () => {
           <div className="parent relative ">
             
             
-<div className="bg-[#3579F6]   w-[1026px] h-[637px]  absolute -right-[200px] blur-[200px]  opacity-40   rounded-[75%] overflow-hidden  ">
+<div className="bg-[#3579F6]   w-[1026px] h-[637px]  absolute -right-[391px] blur-[200px]  opacity-40   rounded-[75%] overflow-hidden  ">
  </div>
- <div className="bg-[#3579F6]   w-[1026px] h-[637px]  absolute -left-[150px] bottom-[200px] blur-[200px]  opacity-40   rounded-[75%] overflow-hidden  ">
+ <div className="bg-[#3579F6] w-[1026px] h-[637px]  absolute -left-[533px] bottom-[750px] blur-[200px]  opacity-40   rounded-[75%] overflow-hidden  ">
  </div>
                
             <div className=" content flex w-full h-[202px]  ">
@@ -119,9 +120,11 @@ const Pubblieworks = () => {
                 />
               </div>
             </div>
+             < Carddetails />
           </div>
         </div>
       </div>
+     
     </>
   );
 };

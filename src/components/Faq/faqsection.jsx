@@ -50,17 +50,19 @@ const Faqsection = () => {
   };
 
   return (
-    <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 bg-[#010C1B]">
-     
-      <div className="relative  py-10 lg:py-22 overflow-hidden">
+    <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 bg-[#010C1B] bg-cover bg-end bg-no-repeat "   style={{ backgroundImage: `url(${bgmain})` }}>
+
+      <div className="relative  py-10 lg:py-14 overflow-hidden">
         {/* Background Image */}
-        
-        <img
+
+        {/* <img
           src={bgmain}
           alt=""
-          className="absolute -top-[80px] left-0 w-full h-full  hidden lg:block w-[381px] h-[342px]  "
-        />
-<div className="relative z-10 flex flex-col items-center text-center mt-6  lg:mt-[80px]">
+          className="absolute -top-[80px] left-0
+            hidden lg:block w-[381px] h-[342px]   "
+        /> */}
+       
+        <div className="relative z-10 flex flex-col items-center text-center mt-6  lg:mt-[80px]">
           <h2 className="text-2xl md:text-3xl lg:text-[36px] font-inter font-bold text-white">
             Frequently Asked Questions
           </h2>
@@ -125,7 +127,7 @@ const Faqsection = () => {
         />
 
         {/* Content */}
-        
+
       </div>
     </div>
   );

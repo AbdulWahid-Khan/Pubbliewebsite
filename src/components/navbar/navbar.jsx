@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="main px-5 xl:px-[60px] py-4 flex justify-between items-center bg-white absolute w-full z-40">
+      <div className="main px-5 xl:px-[60px] p-[14px] flex justify-between items-center bg-white relative w-full z-40">
         <div className="lefticon flex gap-2.5">
           <img src={Pubblieicon} alt="" className="w-[29px] h-[34px]" />
           <img src={publietexticon} alt="" className="w-[76px] h-[26px]" />
