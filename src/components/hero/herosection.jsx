@@ -25,7 +25,7 @@ const Herosection = () => {
           <img
               src={herotopspring}
               alt=""
-              className=" absolute top-0 right-0 z-0  hidden lg:block "
+              className=" absolute -top-10 -right-0 z-0  w-[253px] h-[253px] hidden lg:block  "
             />
             <img
               src={herotopspring}
