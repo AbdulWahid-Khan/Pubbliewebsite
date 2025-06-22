@@ -14,7 +14,7 @@ function App() {
       <Herosection />
       <About />
       <Pubblieworks />
-      <Carddetails />
+
       <Faqsection />
       <Formsection />
     </>

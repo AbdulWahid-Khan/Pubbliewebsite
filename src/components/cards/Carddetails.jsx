@@ -65,16 +65,16 @@ const Carddetails = () => {
 
   return (
     <>
-      <div className="main pb-4">
-        <div className="w-full max-w-5xl mx-auto text-center">
+      <div className="main mb-4">
+        <div className="w-full    mx-auto text-center">
           <p className="font-bold font-inter text-lg text-black mb-2">
             What Our Users Say
           </p>
-          <p className="font-bold font-inter text-[32px] text-black">
+          <p className="font-bold font-inter text-[22px] xl:text-[32px] text-black">
             See How PUBBLI Transforms Campaigns
           </p>
         </div>
-        <div className="red pl-[377px] pt-[80px] mb-1">
+        <div className="red xl:pl-[377px] xl:pt-[80px] mb-1 flex justify-center m-1 hidden xl:block">
           <img src={reddivpic} alt="" />
         </div>
         <div className="cards bg-[rgb(244,244,244)] grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-8  py-3.5 px-5.5 gap-4 mt.5 ">
@@ -107,8 +107,8 @@ const Carddetails = () => {
             </div>
           ))}
         </div>
-        <div className="red max-w-[1500px] w-full flex justify-end mt-1">
-          <img src={greedivpic} alt="" />
+        <div className="red max-w-[1500px] w-full flex justify-end mt-1 ">
+          <img src={greedivpic} alt="" className="xl:pl-[377px]  mb-1 flex justify-center m-1 hidden xl:block"/>
         </div>
 
         <div className="bottomteext">
