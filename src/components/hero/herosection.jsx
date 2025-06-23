@@ -21,7 +21,7 @@ const Herosection = () => {
     <>
       <div className="outer">
         <div className="">
-        <div className="main relative w-full  xl:min-h-[933px] h-full">
+        <div className="main relative w-full  lg:min-h-[933px] h-full ">
           <img
               src={herotopspring}
               alt=""
@@ -44,12 +44,12 @@ const Herosection = () => {
                 <span className="text-Primary">Pubblie</span>
               </p>
             </div>
-           <div className="hidden xl:block w-full h-[131px] elipse  rounded-[50%] absolute top-[164px] left-1/2 -translate-x-1/2 z-10  bg-white"></div>
+           <div className="hidden md:block w-full h-[131px] elipse  rounded-[50%] absolute top-[164px] left-1/2 -translate-x-1/2 z-10  bg-white"></div>
             <div className=" absolute top-[180px] sm:top-[228px] images flex w-full justify-center sm:justify-between gap-[40px] 2xl:gap-[80px] z-0 ">
               <img src={firstimg} alt="" className="hidden sm:block"/>
-              <img src={secondimg} alt="" className="hidden lg:block"/>
+              <img src={secondimg} alt="" className="hidden xl:block"/>
               <img src={thirdimg} alt="" className="hidden xl:block" />
-              <img src={firstimg} alt="" className="hidden sm:block"/>
+              <img src={firstimg} alt="" className="hidden lg:block"/>
               <img src={fourthimg} alt="" className=""/>
 
             </div>
@@ -59,8 +59,8 @@ const Herosection = () => {
               Success.
             </p>
             <div className="button  flex justify-center w-full absolute top-[580px] sm:top-[560px] left-1/2 -translate-x-1/2 z-20">
-              <div className="button relative  flex justify-between items-center  w-[320px] h-full  rounded-full bg-white ">
-                <button className=" left-0 bg-Primary max-w-[268px] h-[52px] w-full  rounded-full text-lg text-white font-Dmsans  shadow-[0px_26px_26px_rgba(53,121,246,0.62)]">
+              <div className="button relative  flex justify-between items-center w-[288px] sm:w-[320px] h-full  rounded-full bg-white ">
+                <button className=" left-0 bg-Primary max-w-[228px] sm:w-[268px] h-[52px] w-full  rounded-full text-lg text-white font-Dmsans  shadow-[0px_26px_26px_rgba(53,121,246,0.62)]">
                   Create Account Now
                 </button>
                 <div className="w-[27px] h-[22px] bg-Primary absolute right-[42px]"></div>
@@ -76,7 +76,7 @@ const Herosection = () => {
 
            
           </div>
-          <div className="bottomtextimages  flex mt-[615px] md:mt-[603px]  max-w-[1800px] mx-auto  justify-between items-center w-full justify-between px-4">
+          <div className="bottomtextimages  flex mt-[615px] md:mt-[603px]  max-w-[1800px] mx-auto  justify-between items-center w-full justify-between px-4 lg:px-[60px] ">
               <div className="text flex flex-col text-center ">
                 <p className="font-inter text-[22px] font-semiblod ">22,000+</p>
                 <p className="font-inter text-[14px] font-semiblod leading-[20px]">
@@ -89,23 +89,23 @@ const Herosection = () => {
               <img src={fourthtext} alt="" className="w-[130px] h-[140px] sm:w-[159px] sm:h-[50px] hidden md:block" />
               <img src={fifthtext} alt="" className="w-[130px] h-[140px] sm:w-[159px] sm:h-[50px] hidden md:block" />
             </div>
-        <div className="z-30 absolute px-1  lg:top-[867px] w-full bg-linear-to-r from-[#3579F6] to-[#1F4790] h-[70px]">
-              <div className="content flex items-center justify-between max-w-[840px] w-full h-full  mx-auto">
+        <div className="z-30 absolute px-4  lg:top-[867px] w-full bg-linear-to-r from-[#3579F6] to-[#1F4790] h-[70px]">
+              <div className="content flex items-center gap-1 text-center justify-between max-w-[840px] w-full h-full  ">
                 <div className="leftcontent flex items-center gap-1.5">
                   <img src={Cicon} alt="" className="hidden sm:block" />
-                  <p className="text-sm sm:text-base font-inter font-medium text-white">
+                  <p className="text-[12px] sm:text-base font-inter font-medium text-white">
                     Exclusive content rights
                   </p>
                 </div>
                 <div className="middlecontent flex gap-1.5 items-center">
                   <img src={paymenticon} alt="" className="hidden sm:block"/>
-                  <p className="text-sm sm:text-sm sm:text-base  font-inter font-medium text-white">
+                  <p className="text-[12px] sm:text-sm sm:text-base  font-inter font-medium text-white">
                     Payment handling
                   </p>
                 </div>
                 <div className="lastcontent flex gap-1.5 items-center">
                   <img src={profileicon} alt="" className="hidden sm:block"/>
-                  <p className="text-sm sm:text-base font-inter font-medium text-white">
+                  <p className="text-[12px] sm:text-base font-inter font-medium text-white">
                     Access 100,000+ creators
                   </p>
                 </div>

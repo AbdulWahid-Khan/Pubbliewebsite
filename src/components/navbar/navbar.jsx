@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="main px-5 xl:px-[60px] p-[14px] flex justify-between items-center bg-white relative w-full z-40">
+      <div className="main px-5 xl:px-[60px] p-[14px]  fixed  flex justify-between items-center bg-white relative fixed w-full z-40">
         <div className="lefticon flex gap-2.5">
           <img src={Pubblieicon} alt="" className="w-[29px] h-[34px]" />
           <img src={publietexticon} alt="" className="w-[76px] h-[26px]" />
@@ -53,14 +53,14 @@ const Navbar = () => {
           onClick={toggleMenu}
         >
           {
-            isOpen ? <RxCross2 className="h-8 w-8" /> : <GiHamburgerMenu className="h-8 w-8" />
+            isOpen ? <RxCross2 className="h-8 w-8  " /> : <GiHamburgerMenu className="h-8 w-8" />
           }
         </div>
       </div>
 
     
       {isOpen && (
-        <div className="px-5 vertical block xl:hidden bg-linear-to-bl from-violet-500 to-fuchsia-500 absolute top-[60px] w-full h-full z-30">
+        <div className="px-5 vertical block xl:hidden bg-linear-to-bl from-violet-500 to-fuchsia-500  absolute fixed  top-[80px]  w-full min-h-screen  z-80">
           <div className="middle flex flex-col gap-4">
             <ul className="flex flex-col justify-between w-full gap-6">
               <li className="text-md text-Grey font-inter font-large">

@@ -21,8 +21,8 @@ const Formsection = () => {
   return (
     <>
       <div className="main  flex flex-col md:flex md:flex-row  md:px-[60px]  gap-[21px]   bg-[#f7f7f7] justify-center  items-start pt-7 pb-[18px] ">
-        <div className="leftcontent pb-8  overflow-hidden bg-white  max-w-[689px] relative  w-full   pt-[3px] px-[30px]  md:pb-[46px]  rounded-[22px] mb-[26px]">
-          <div className="header ">
+        <div className="leftcontent   overflow-hidden bg-white  max-w-[689px]  relative  w-full    pt-[3px] px-[30px]     rounded-[22px] pb-10">
+          <div className="header text-center md:text-start">
             <p className="text-Primary text-lg font-bold font-inter ">
               Get in touch
             </p>
@@ -31,7 +31,7 @@ const Formsection = () => {
             </h3>
           </div>
 
-          <p className="text-base font-inter max-w-[604px] w-full font-normal pt-1 xl:pt-[42px]">
+          <p className="text-base font-inter max-w-[604px] w-full font-normal pt-1 xl:pt-[42px] text-center md:text-start">
             have questions or feedback? we’re here to help. Send us a message ,
             and we’ll respond within 24 hours.
           </p>
@@ -66,7 +66,7 @@ const Formsection = () => {
               />
             </label>
           </div>
-          <div className="textarea  h-[80px] md:h-full w-full">
+          <div className="textarea  h-[80px] md:h-[120px] w-full">
             <label
               htmlFor="textarea"
               className="text-sm font-inter font-medium ]"
@@ -90,7 +90,7 @@ const Formsection = () => {
               </p>
             </label>
           </div>
-          <div className="buttoncontrolls flex justify-center md:justify-end items-center pt-[70px] ">
+          <div className="buttoncontrolls flex justify-center md:justify-end items-center pt-[70px] md:pt-3]">
             <div className="button relative flex justify-between items-center  w-[173px] h-full">
               <button className="absolute left-0 bg-Primary max-w-[120px] h-[52px] w-full  rounded-full text-lg text-white font-Dmsans">
                 Submit
@@ -103,8 +103,8 @@ const Formsection = () => {
           </div>
         </div>
 
-        <div className="rightcontenten bg-white  max-w-[610px] h-[450px] xl:h-[710px]   w-full	bg-[#f7f7f7]  flex flex-col gap-4 rounded-[22px]  ">
-          <div className="images relative  overflow-hidden w-[300px] h-[300px]  w-full h-full xl:max-w-[610px] xl:max-h-[397px]  w-full  rounded-[22px]  ">
+        <div className="rightcontenten bg-[#f7f7f7]  max-w-[610px] h-[450px] md:h-[710px] lg:h-[610px] xl:h-[625px]  w-full	bg-[#f7f7f7]  flex flex-col gap-4 rounded-[22px] xl:pb-0 md:flex-col md:items-between md:gap-[42px] md:justify-center ">
+          <div className="images relative overflow-hidden w-[300px] h-[350px]   w-full  xl:max-w-[610px] xl:max-h-[397px]  w-full  rounded-[22px]  ">
             <div className="bgcolor bg-Navyblue  blur-[100px] w-[200px] h-full xl:max-w-[484px] xl:max-h-[242px] absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 "></div>
 
             <img
@@ -115,7 +115,7 @@ const Formsection = () => {
             <img
               src={personpic}
               alt=""
-              className=" xl:w-[472px] xl:h-[397px]  h-[250px] absolute left-0 top-1/2 -translate-y-1/2 z-10 rounded-[22px] object-cover"
+              className=" xl:w-[472px] xl:h-[397px]  h-[250px] md:h-[350px] absolute left-0 top-1/2 -translate-y-1/2 z-10 rounded-[22px] object-cover"
             />
             <img
               src={righttopballoon}
@@ -123,10 +123,10 @@ const Formsection = () => {
               className="absolute right-0 bottom-0 xl:w-[176px] xl:h-[176px] w-[80px] h-[120px] z-20"
             />
           </div>
-          <div className="subportion max-w-[610px] w-full max-h-[291px]  ">
-          <div className="contactpart pl-5 ">
-            <div className="mailcontent flex flex-row  gap-6 items-center xl:pt-[22px]  ">
-              <div className="mail w-[60px] h-[60px] p-3.5 bg-[rgba(50,139,255,0.16)] rounded-full">
+          <div className="subportion max-w-[610px] w-full   xl:max-h-[291px] bg-white  ">
+          <div className="contactpart pl-5 xl:pt-4">
+            <div className="mailcontent  flex lg:flex-row  pt-6 md:pt-12 lg:pt-2 gap-6 items-center xl:pt-[22px]  ">
+              <div className="mail  w-[60px] h-[60px] p-3.5 bg-[rgba(50,139,255,0.16)] rounded-full">
                 <FaRegEnvelope className="text-Primary w-[32px] h-[32px] " />
               </div>
               <div className="maintext flex flex-col gap-1.5">
@@ -138,7 +138,7 @@ const Formsection = () => {
             </div>
           </div>
 
-          <div className="callcontent flex   gap-4 items-center pt-3 pl-5">
+          <div className="callcontent  flex lg:flex-row    gap-4 md:pt-8 lg:pt-3 xl:pt-7 items-center pt-3 pl-5">
             <div className="mail w-[60px] h-[60px] p-3.5 bg-[rgba(50,139,255,0.16)] rounded-full ">
               <IoCallOutline className="text-Primary w-[32px] h-[32px]" />
             </div>
@@ -150,17 +150,17 @@ const Formsection = () => {
             </div>
              
           </div>
-          
-          </div>
-         <div className=" iocns flex justify-center gap-6 items-center xl:pt-[20px]  xl:flex">
+          <div className=" iocns  flex justify-center gap-6 items-center xl:pt-8 xl:pb-2 xl:flex md:pt-[30px] lg:pb-3 ">
             <img src={facebook} alt="" />
             <img src={linkdin} alt="" />
             <img src={instragram} alt="" />
           </div>
+          </div>
+         
         </div>
       </div>
-      <div className="bottom bg-[#010C1B] pb-6 xl:mt-[60px] overflow-hidden flex flex-col relative justify-center items-center bg-grey pt-2 xl:pt-[30px] xl:px-[60px] justify-center items-center ">
-        <div className="pubblieiocn flex gap-4 pb-3.5 ">
+      <div className="bottom bg-[#010C1B] pb-6  xl:mt-[60px] overflow-hidden flex flex-col relative justify-center items-center bg-grey pt-2 xl:pt-[30px] xl:px-[60px] justify-center items-center ">
+        <div className="pubblieiocn flex gap-4 pb-3.5 py-3">
           <img src={Pubblieicon} alt="" className="w-[29px] h-[34px]" />
           <img src={pubbliewhite} alt="" className="w-[75px] h-[26px] " />
         </div>
@@ -170,7 +170,7 @@ const Formsection = () => {
   <p className="mt-1 flex row   xl:justiyf-start   xl:mt-0 xl:mr-4 text-sm font-inter text-white md:w-full  mx-auto ">
     pubblie @ 202X. All rights reserved.
   </p>
-  <div className="mb-2 xl:mb-0 xl:ml-4 flex xl:gap-2 flex row justify-around xl:justify-end items-center  w-full ">
+  <div className="mb-2 xl:mb-0 xl:ml-4 flex xl:gap-2 flex row justify-center gap-3 xl:justify-end items-center  w-full ">
     <img src={youtubeicon} alt="" className="w-[24px] h-[24px]" />
     <img src={facebookicon} alt="" className="w-[24px] h-[24px]" />
     <img src={instagramicon} alt="" className="w-[24px] h-[24px]" />

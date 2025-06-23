@@ -18,25 +18,25 @@ const Faqsection = () => {
   const getItems = (panelStyle) => [
     {
       key: "1",
-      label: <p className="text-lg font-bold font-inter">How does the escrow payment system work?</p>,
+      label: <p className="text-base md:text-lg font-bold font-inter">How does the escrow payment system work?</p>,
       children: <p className="pt-4 pb-8 text-sm font-inter text-[#808080] leading-relaxed">{text}</p>,
       style: panelStyle,
     },
     {
       key: "2",
-      label: <p className="text-lg font-bold font-inter">What metrics can I track in the analytics dashboard?</p>,
+      label: <p className="text-base md:text-lg font-bold font-inter">What metrics can I track in the analytics dashboard?</p>,
       children: <p className="pt-4 pb-8 text-sm font-inter text-[#808080] leading-relaxed">{text}</p>,
       style: panelStyle,
     },
     {
       key: "3",
-      label: <p className="text-lg font-bold font-inter">Can I try PUBBLI for free?</p>,
+      label: <p className="text-base md:text-lg font-bold font-inter">Can I try PUBBLI for free?</p>,
       children: <p className="pt-4 pb-8 text-sm font-inter text-[#808080] leading-relaxed">{text}</p>,
       style: panelStyle,
     },
     {
       key: "4",
-      label: <p className="text-lg font-bold font-inter">How are influencers matched to campaigns?</p>,
+      label: <p className="text-base md:text-lg font-bold font-inter">How are influencers matched to campaigns?</p>,
       children: <p className="pt-4 pb-8 text-sm font-inter text-[#808080] leading-relaxed">{text}</p>,
       style: panelStyle,
     },

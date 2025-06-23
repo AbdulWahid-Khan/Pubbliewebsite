@@ -42,25 +42,25 @@ const About = () => {
             <img
               src={updatedbgblue}
               alt=""
-              className="absolute top-0 left-0 w-[381px] h-[381px] "
+              className="absolute top-0 left-0  w-[381px] h-[381px] hidden md:block  "
             />
             <img
               src={angularbottompic}
               alt=""
-              className="absolute bottom-0 right-0 w-[381px] h-[381px] "
+              className="absolute bottom-0 right-0 w-[381px] h-[381px] hidden md:block"
             />
-            <div className="text md:pr-[60px]  z-10 text-center md:text-end">
-              <p className="text-[22px] md:text-[44px]  font-bold font-family-inter bg-[linear-gradient(90deg,rgba(255,255,255,0.7)_0%,#8BBFFF_100%)] text-transparent bg-clip-text">
+            <div className="text px-4 md:pr-[60px] flex flex-col gap-3  z-10 text-center md:text-end">
+              <p className="text-[20px] md:text-[44px]  font-bold font-family-inter bg-[linear-gradient(90deg,rgba(255,255,255,0.7)_0%,#8BBFFF_100%)] text-transparent bg-clip-text">
                 What makes Pubblie different
               </p>
-              <p className="font-inter text-[16px] md:text-[20px] bg-[linear-gradient(90deg,rgba(255,255,255,0.7)_0%,#8BBFFF_100%)] text-transparent bg-clip-text ">
+              <p className="font-inter text-base md:text-[20px] bg-[linear-gradient(90deg,rgba(255,255,255,0.7)_0%,#8BBFFF_100%)] text-transparent bg-clip-text ">
                 Revolutionizing the way advertisers and influencers collaborate
                 for unparalleled success.
               </p>
             </div>
 
-            <div className="flex w-full   md:pl-[90px] pb-[060px]">
-              <div className=" flex grid place-items-center  gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 max-w-[957px] w-full">
+            <div className="flex w-full   xl:pl-[90px] pb-[060px]">
+              <div className=" flex mx-auto grid place-items-center  gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 max-w-[957px] w-full">
                 {Card.map((card) => (
                   <div className="card py-5 px-4 rounded-[25px] w-[228px] h-[326px] flex flex-col items-center justify-center skew-x-5 border-[0.4px] border-[rgba(255,255,255,0.18)] shadow-[-4px_-4px_4px_0px_rgba(72,72,72,0.25)] bg-[rgba(255,255,255,0.05)]">
                     <div className="pic flex justify-center items-center w-[73px] h-[73px] rounded-full p-4 bg-[rgba(255,255,255,0.12)] shadow-[-4.5px_-4.5px_4.5px_0px_rgba(72,72,72,0.25)]">
