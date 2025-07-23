@@ -52,12 +52,12 @@ function App() {
 
         {
   path: 'compaigns',
-  // element: <Compaigns />,
+  element: <Compaigns />,
   children: [
     {
-      path: 'campaignwithoutproduct', // ✅ remove "compaigns/"
+      path: "campaignwithoutproduct",
       element: <CampaignWithoutProduct />,
-    }
+    },
   ]
 },
 
