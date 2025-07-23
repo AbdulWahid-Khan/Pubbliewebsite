@@ -26,23 +26,27 @@ const SideBar = () => {
                             <li className="h-full hover:cursor-pointer">
                                 <NavLink
                                     to="/home"
-                                    className="flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 bg-[rgb(245,245,245)] w-full h-full"
+                                    className={({ isActive }) => `${isActive ? "text-black flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 bg-[rgb(245,245,245)] w-full h-full" : "flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3  w-full h-full text-[rgb(158,158,158)] "}`}
                                     onClick={() => navigate('/')}>
                                     <AiOutlineHome size={24} />
                                     Home
                                 </NavLink>
                             </li>
-                            <li className="flex items-center justify-between gap-2.5 px-4 py-3 bg-[rgb(245,245,245)] hover:cursor-pointer text-Darkgrey h-full rounded-md">
-                                <div className="flex items-center gap-3 " onClick={() => navigate('/compaigns')}>
+                            <li className="h-full hover:cursor-pointer">
+                                <NavLink
+                                    to="/compaigns"
+                                    className={({ isActive }) => `${isActive ? "text-black flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 bg-[rgb(245,245,245)] w-full h-full" : "flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3  w-full h-full text-[rgb(158,158,158)] "}`}
+                                >
                                     <PiSpeakerHigh size={24} />
                                     <span className="font-inter text-sm">Campaigns</span>
-                                </div>
-                                <IoIosArrowForward />
+                                    <IoIosArrowForward />
+                                </NavLink>
+                                
                             </li>
                             <li className="h-full">
                                 <NavLink
                                     to="/wallet"
-                                    className="flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 bg-[rgb(245,245,245)] h-full text-Darkgrey hover:cursor-pointer w-full"
+                                     className={({ isActive }) => `${isActive ? "text-black flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 bg-[rgb(245,245,245)] w-full h-full" : "flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3  w-full h-full text-[rgb(158,158,158)]"}`}
                                 >
                                     <CiWallet size={24} />
                                     My Wallet
@@ -52,7 +56,7 @@ const SideBar = () => {
                             <li className="h-full">
                                 <NavLink
                                     to="/shipments"
-                                    className="flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 bg-[rgb(245,245,245)] h-full text-Darkgrey hover:cursor-pointer w-full"
+                                    className={({ isActive }) => `${isActive ? "text-black flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 bg-[rgb(245,245,245)] w-full h-full" : "flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3  w-full h-full text-[rgb(158,158,158)]"}`}
                                 >
                                     <FaDolly size={24} />
                                     Shipments
@@ -62,7 +66,7 @@ const SideBar = () => {
                             <li className="h-full">
                                 <NavLink
                                     to="/profile"
-                                    className="flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 bg-[rgb(245,245,245)] h-full text-Darkgrey hover:cursor-pointer w-full"
+                                    className={({ isActive }) => `${isActive ? "text-black flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 bg-[rgb(245,245,245)] w-full h-full" : "flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3  w-full h-full text-[rgb(158,158,158)] "}`}
                                 >
                                     <CgProfile size={24} />
                                     Profile
@@ -72,7 +76,7 @@ const SideBar = () => {
                             <li className="h-full">
                                 <NavLink
                                     to="/settings"
-                                    className="flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 bg-[rgb(245,245,245)] h-full text-Darkgrey hover:cursor-pointer w-full"
+                                    className={({ isActive }) => `${isActive ? "text-black flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 bg-[rgb(245,245,245)] w-full h-full" : "flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3  w-full h-full text-[rgb(158,158,158)]"}`}
                                 >
                                     <IoSettingsOutline size={24} />
                                     Settings

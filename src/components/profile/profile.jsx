@@ -107,7 +107,7 @@ const options = {
                             <div className="rightsubpart flex flex-col gap-2">
                                 <p className='font-inter font-bold text-base '>Leslie Alexander </p>
                                 <p className='flex gap-2 items-center font-inter text-xs'><img src={campaignicon} alt="" className='w-6 h-4.5' /> 66  campaigns </p>
-                                <button className='w-[96px] h-[30px] py-1.5 px-3 rounded-[6px] text-white text-sm font-inter bg-black'>Edit profile</button>
+                                <button className='w-[96px] h-[30px] py-1.5 px-3 rounded-[6px] text-white text-sm font-inter bg-black hover:cursor-pointer'>Edit profile</button>
                             </div>
 
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { use, useState } from 'react'
 import { IoSearchOutline } from "react-icons/io5";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Space, Table, Tag } from 'antd';
@@ -6,6 +6,15 @@ import lemonicon from "./../../assets/images/lemonicon.svg"
 import nitroicon from "./../../assets/images/nitroicon.svg"
 import { RxEyeOpen } from "react-icons/rx";
 const Shipments = () => {
+    const [openDropdown, setOpenDropdown] = useState(false);
+    const [openDropdown2 ,setOpenDropdown2]= useState(false);
+     const handleDropdownClick = () => {
+        setOpenDropdown(!openDropdown);
+    };
+    const handleDropdownClick2 = () => {
+        setOpenDropdown2(!openDropdown2);
+    };
+
     return (
         <>
             <div className="main">
@@ -14,11 +23,11 @@ const Shipments = () => {
                         <IoSearchOutline className='text-Primary' />
                         <input type="search" placeholder='search' className='text-Garkgrey text-[12px] outline-none' />
                     </div>
-                    <div className=" dropdown flex  max-w-[250px] w-full justify-between">
+                    <div className=" dropdown flex  max-w-[290px] w-full justify-between">
                         <div className="relative inline-block text-left">
                             <div className="border border-gray-300 rounded  text-Darkgrey text-sm font-inter">
-                                <p className="text-sm mb-1 font-medium flex items-center ">Type: AlL<MdOutlineKeyboardArrowDown className='' size={25} /> </p>
-                                {/* <div className="flex flex-col gap-1">
+                                <p className="text-sm mb-1 font-medium flex items-center hover:cursor-pointer" onClick={handleDropdownClick} >Type: AlL<MdOutlineKeyboardArrowDown className='' size={25} /> </p>
+                                <div className={`flex flex-col gap-1  ${openDropdown ? 'block' : 'hidden'}`}>
                                     <label className="flex items-center gap-2 text-sm">
                                         <input type="checkbox" className="form-checkbox" /> All
                                     </label>
@@ -28,13 +37,13 @@ const Shipments = () => {
                                     <label className="flex items-center gap-2 text-sm">
                                         <input type="checkbox" className="form-checkbox" /> Without product
                                     </label>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                         <div className="relative inline-block text-left ">
                             <div className="border border-gray-300 rounded text-Darkgrey text-sm font-inter">
-                                <p className="text-sm mb-1 font-medium flex items-center text-Darkgrey ">Periods: This year<MdOutlineKeyboardArrowDown className='' size={25} /> </p>
-                                {/* <div className="flex flex-col gap-1">
+                                <p className="text-sm mb-1 font-medium flex items-center text-Darkgrey hover:cursor-pointer" onClick={handleDropdownClick2}>Periods: This year<MdOutlineKeyboardArrowDown className='' size={25} /> </p>
+                                <div className={`flex flex-col gap-1 ${openDropdown2 ? 'block' : 'hidden'}`}>
                                     <label className="flex items-center gap-2 text-sm">
                                         <input type="checkbox" className="form-checkbox" /> All
                                     </label>
@@ -44,7 +53,7 @@ const Shipments = () => {
                                     <label className="flex items-center gap-2 text-sm">
                                         <input type="checkbox" className="form-checkbox" /> Without product
                                     </label>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                     </div>

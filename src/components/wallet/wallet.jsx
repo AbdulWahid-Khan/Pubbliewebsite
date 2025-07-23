@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import dollaricon from "./../../assets/images/dollaricon.svg"
 import { RiArrowDropLeftLine } from "react-icons/ri";
 import { RiArrowDropRightLine } from "react-icons/ri";
@@ -6,6 +6,12 @@ import nitroicon from "./../../assets/images/nitroicon.svg"
 import { IoSearchOutline } from "react-icons/io5";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 const Wallet = () => {
+
+    const [openDropdown, setOpenDropdown] = useState(false);
+
+    const handleDropdownClick = () => {
+        setOpenDropdown(!openDropdown);
+    };
   return (
     <>
       <div className="main">
@@ -19,7 +25,7 @@ const Wallet = () => {
                     <p className='font-inter text-sm leading-[1.28%] text-Darkgrey'>Your Power to Launch Amazing Campaigns!</p>
                     <p className='font-inter font-bold text-[32px]'>$ 500</p>
                 </div>
-                <button className='w-[143px] h-[45px] bg-Primary text-white rounded-[6px]'>withdraw</button>
+                <button className='w-[143px] h-[45px] bg-Primary text-white rounded-[6px] hover:cursor-pointer'>withdraw</button>
             </div>
             <div className="transactions flex justify-between items-center max-w-[600px] w-full mt-[38px]">
                 <RiArrowDropLeftLine className='hover:cursor-pointer'/>
@@ -48,8 +54,8 @@ const Wallet = () => {
                                </div>
                                    <div className="relative inline-block text-left ">
                                        <div className="border border-gray-300 rounded text-Darkgrey text-sm font-inter">
-                                           <p className="text-sm mb-1 font-medium flex items-center text-Darkgrey ">Periods: This year<MdOutlineKeyboardArrowDown className='' size={25} /> </p>
-                                           {/* <div className="flex flex-col gap-1">
+                                           <p className="text-sm mb-1 font-medium flex items-center text-Darkgrey cursor-pointer" onClick={handleDropdownClick} >Periods: This year<MdOutlineKeyboardArrowDown className='' size={25} /> </p>
+                                           <div className={`flex flex-col gap-1 ${openDropdown ? 'block' : 'hidden'}`}>
                                                <label className="flex items-center gap-2 text-sm">
                                                    <input type="checkbox" className="form-checkbox" /> All
                                                </label>
@@ -59,7 +65,7 @@ const Wallet = () => {
                                                <label className="flex items-center gap-2 text-sm">
                                                    <input type="checkbox" className="form-checkbox" /> Without product
                                                </label>
-                                           </div> */}
+                                           </div>
                                        </div>
                                    </div>
                                </div>

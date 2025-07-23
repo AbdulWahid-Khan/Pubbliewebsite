@@ -19,6 +19,12 @@ import Wallet from "./components/wallet/wallet";
 import Profile from "./components/profile/profile";
 import Settings from "./components/setting/settings";
 import Compaigns from "./components/compaing/compaigns";
+import CompaignDetails from "./components/compaigndetails/compaignDetails";
+import AudienceBarChart from "./components/chart/BarChart";
+import AffilationPost from "./components/affilation/affilationPost";
+import CommisionDetails from "./components/commisiondetails/commisionDetails";
+import CampaignPageNine from "./components/compaign9/compaignpagenine";
+import CampaignWithoutProduct from "./components/campaignwithoutproduct/campaignWithoutProduct";
 
 
 
@@ -31,49 +37,79 @@ function App() {
       children: [
 
         {
-          index: true, // <-- This loads Home by default
+          index: true,
           element: <Home />,
         },
         {
           path: "home",
           element: <Home />,
-        },
-        {
-          path:'compaigns',
-          element:<Compaigns/>,
+
         },
         {
           path: "nitrocircus",
           element: <NitroCircuspage />,
-
         },
+
+        {
+  path: 'compaigns',
+  // element: <Compaigns />,
+  children: [
+    {
+      path: 'campaignwithoutproduct', // ✅ remove "compaigns/"
+      element: <CampaignWithoutProduct />,
+    }
+  ]
+},
+
 
         {
           path: "nitrocircus/applynow",
           element: <Applynow />
         },
-        
-           {
+
+        {
           path: "shipments",
           element: <Shipments />
         },
         {
-          path:"wallet",
-          element:<Wallet/>
+          path: "wallet",
+          element: <Wallet />
         },
         {
-          path:"profile",
-          element:<Profile />
+          path: "profile",
+          element: <Profile />
         },
         {
-          path:'/settings',
-          element:<Settings />
+          path: '/settings',
+          element: <Settings />
         },
 
-     
+
       ],
 
     },
+    {
+      path: "/compaigndetails",
+      element: <CompaignDetails />,
+    },
+    {
+      path: "/affilationpost",
+      element: <AffilationPost />,
+    },
+    {
+      path: "/commisiondetails",
+      element: <CommisionDetails />,
+    },
+    {
+      path: "/compaignnine",
+      element: <CampaignPageNine />,
+    },
+    {
+      path: "/campaignwithoutproduct",
+      element: <CampaignWithoutProduct />,
+    }
+
+
   ]);
 
   return (

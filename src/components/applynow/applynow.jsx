@@ -13,8 +13,14 @@ const Applynow = () => {
             <div className="main">
                 <div className="bar flex justify-between mt-[33px]">
                     <p className='font-inter font-bold text-lg '>Content</p>
-                    <div className='flex justify-between max-w-[550px] w-full'>
-                        <p className='text-sm leading-[128%] text-Darkgrey'>Match with requirements </p>
+                    <div className='flex justify-between max-w-[550px] w-full items-center '>
+                        <p className='text-sm leading-[128%] text-Darkgrey max-w-[165px] w-full'>Match with requirements </p>
+                        <div className="max-w-[324px] w-full h-[10px] bg-[rgba(0,0,0,0.08)] rounded-[6px] overflow-hidden">
+                            <div
+                                className="h-full bg-green-200 w-[0%]"
+
+                            ></div>
+                        </div>
                         <p>0%</p>
                     </div>
                 </div>
@@ -50,7 +56,7 @@ const Applynow = () => {
                 <div className="bottobar px-2.5 py-1.25 flex justify-between">
 
                     <p className='text-sm font-inter leading-[128%] text-Darkgrey'>After applying for the campaign it will take a while to reviewed & further proceed</p>
-                    <button className='w-[121px] h-[40px] bg-Primary rounded-[6px] text-white '>Submit</button>
+                    <button className='w-[121px] h-[40px] bg-Primary rounded-[6px] text-white hover:cursor-pointer'>Submit</button>
                 </div>
             </div>
 

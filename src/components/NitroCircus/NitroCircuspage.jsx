@@ -16,19 +16,20 @@ import cityicon from "./../../assets/images/city.svg";
 import gendericon from "./../../assets/images/genderimg.svg";
 import ageicon from "./../../assets/images/ageimg.svg";
 import ethnicityicon from "./../../assets/images/ethnicity.svg"
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 
-function NitroCircuspage() {
+function NitroCircuspage(className) {
+    const pathname = useLocation().pathname;
     const navigate =useNavigate();
     return (
         <> 
-            <div className="card ">
-                <div className="card flex gap-4 ">
+            <div className={`card ${className} `}>
+                <div className="card flex flex-col lg:flex gap-4 ">
                     <div className="img">
                         <img src={Nitrocardbg} alt="" className='w-[212px] h-[212px]' />
                     </div>
                     <div className="rightcontent">
-                        <p className='font-inter text-lg font-bold flex'>Nitro Circus 2024 <span className='px-2.5 pt-[6px] pb-[7px] bg-[#E9FEE7] text-[#2E9300] rounded-[18px]' >Active</span></p>
+                        <p className='font-inter text-lg font-bold lg:flex'>Nitro Circus 2024 <span className='px-2.5 pt-[6px] pb-[7px] bg-[#E9FEE7] text-[#2E9300] rounded-[18px] hidden lg:block' >Active</span></p>
                         <p className='font-inter text-sm text-Primary font-medium mt-2'>Public post</p>
                         <div className='relative mt-3'>
                             <img src={pricebg} alt="" />
@@ -36,14 +37,15 @@ function NitroCircuspage() {
                         </div>
                         <div className="timing flex items-center gap-2 text-Darkgrey items-center mt-4.5">
                             <p className=""><img src={callendericon} alt="" /></p>
-                            <p className="flex items-center gap-2">Jan 18,25 <span> < BsArrowRightShort /></span>Jan 31,25 </p>
+                            <p className="flex items-center gap-2 text-xs lg:text-sm ">Jan 18,25 <span> < BsArrowRightShort /></span>Jan 31,25 </p>
                         </div>
-                        <p className='font-inter text=sm leading-[128%] max-w-[903px] w-full text-Darkgrey mt-2.5'>Promote our Spring Collection through Instagram Reels and Stories. Highlight discounts and limited-time offers. Showcase the product in a lively outdoor setting with natural lighting. </p>
+                        <p className='font-inter text=sm leading-[128%] max-w-[903px] w-full text-Darkgrey mt-2.5 text-xs lg:text-sm w-[300px] lg:w-[660px]'>Promote our Spring Collection through Instagram Reels and Stories. Highlight discounts and limited-time offers. Showcase the product in a lively outdoor setting with natural lighting. </p>
                     </div>
                 </div>
 
                 <div className="centra">
-                    <div className="bodyarea flex gap-4  w-full max-w-[1920px]">
+                    <div className= {`bodyarea flex gap-4  w-full max-w-[1920px] flex  
+                    ${pathname ==="/nitrocircus" ? "flex-col lg:flex-row" : "flex-col "} `}>
                         <div className="content pl-[15px] pr-[22px] pt-[13px] py-[28px] gap-[23px] mt-[41px] max-w-[860px] w-full  ">
                             <p className='text-base font-bold font-inter'>Content Requirements</p>
                             <div className="deatilcontnet flex flex-col gap-4 pt-7 ">
@@ -72,8 +74,8 @@ function NitroCircuspage() {
 
 
 
-                        <div className="content pl-[15px] pr-[22px] pt-[13px] py-[28px] gap-[23px] mt-[41px] max-w-[860px] w-full">
-                            <p className='text-base font-bold font-inter'>Content Requirements</p>
+                        <div className={`content pl-[15px] pr-[22px] pt-[13px] py-[28px] gap-[23px] mt-[41px] max-w-[860px] w-full ${className} flex flex-col  `}>
+                            <p className='text-base font-bold font-inter'>Content format</p>
                             <div className="deatilcontnet">
 
                                 <div className="time  flex gap-7 ">

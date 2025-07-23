@@ -181,7 +181,7 @@ const Home = () => {
         </div>
 
         {/* Cards for advertisements */}
-        <div className="controlling  grid  justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-between 2xl:grid-col-4 max-w-[1740px]    mx-.5   pt-2">
+        <div className="controlling  grid  justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-between 2xl:grid-col-4 max-w-[1740px]    mx-.5   pt-2 place-items-center ">
 
 
           {
@@ -221,7 +221,7 @@ const Home = () => {
                   </p>
 
                 </div>
-                <button className="flex text-Darkgrey items-center justify-self-center pt-3 hover:text-black hover:cursor-pointer" onClick={() => navigate('nitrocircus')}>
+                <button className="flex text-Darkgrey items-center justify-self-center pt-3 hover:text-black hover:cursor-pointer" onClick={() => navigate('/nitrocircus')}>
                   View details <IoIosArrowForward />
                 </button>
               </div>

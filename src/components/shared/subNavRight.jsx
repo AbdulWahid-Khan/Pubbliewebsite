@@ -15,15 +15,15 @@ const SubNavRight = () => {
                     <div className="countryname flex items-center  px-3 py-2 rounded-[8px] border border-Dunkgrey max-w-[148px] w-full ">
                         <img src={usaflag} alt="" className="w-5 h-5" />
                         <p className="font-inter text-[14px] font-medium leading-[14px] px-2">Eng (USA)</p>
-                        <AiOutlineDown className="text-sm" />
+                        <AiOutlineDown className="text-sm hover:cursor-pointer" />
                     </div>
 
                     <div className="bellouter max-w-[138px] w-full flex justify-center items-center">
-                        <img src={bellicon} alt="" />
+                        <img src={bellicon} alt="" className="hover:cursor-pointer"/>
                     </div>
                     <div className="outerbalance max-w-[140px] w-full">
-                        <div className="content flex ga-1 items-center justify-start">
-                            <img src={eyebalance} alt="" className='h-3 w-2'/>
+                        <div className="content flex ga-1 items-center justify-start w-full justify-center ">
+                            <img src={eyebalance} alt="" className='h-6 w-4 mr-1'/>
                             <p>Balance</p>
                         </div>
                         <div className="balance">
@@ -39,7 +39,7 @@ const SubNavRight = () => {
                             <p className='font-inter text-sm font-normal'>Musfiq@gmail.com </p>
                         </div>
                         <div className="icon">
-                            <AiOutlineDown className='h-4 w-4' />
+                            <AiOutlineDown className='h-4 w-4 hover:cursor-pointer' />
                         </div>
                     </div>
 
