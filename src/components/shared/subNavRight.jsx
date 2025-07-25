@@ -1,5 +1,5 @@
 import React from "react";
-import usaflag from "./../../assets/images/usaflag.svg";
+import usaflag from "./../../assets/images/usaFlag.svg";
 import { AiOutlineDown } from "react-icons/ai";
 import bellicon from "./../../assets/images/bellicon.svg";
 import eyebalance from "./../../assets/images/eyebalance.svg";

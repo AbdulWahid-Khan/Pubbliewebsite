@@ -1,4 +1,3 @@
-import React from "react";
 import herotopspring from "./../../assets/images/herotopspring.svg";
 import herobottomspring from "./../../assets/images/herobottonspring.svg";
 import firstimg from "./../../assets/images/firstimage.svg";
@@ -121,23 +120,8 @@ const Herosection = () => {
 
 // export default Herosection;
 
-// import React from "react";
-import herotopspring from "./../../assets/images/herotopspring.svg";
-import herobottomspring from "./../../assets/images/herobottonspring.svg";
-import firstimg from "./../../assets/images/firstimage.svg";
-import secondimg from "./../../assets/images/secondimg.svg";
-import thirdimg from "./../../assets/images/thirdimage.svg";
-import fourthimg from "./../../assets/images/fourthimage.svg";
-import arrowicon from "./../../assets/images/arrowicon.svg";
-import firsttext from "./../../assets/images/bottomtext1.svg";
-import secondtext from "./../../assets/images/bottomtext2.svg";
-import thirdtext from "./../../assets/images/bottomtext3.svg";
-import fourthtext from "./../../assets/images/bottomtext4.svg";
-import fifthtext from "./../../assets/images/bottomtext5.svg";
-import Cicon from "./../../assets/images/Cicon.svg";
-import paymenticon from "./../../assets/images/walleticon.svg";
-import profileicon from "./../../assets/images/profileicon.svg";
-import { MdArrowOutward } from "react-icons/md";
+
+
 
 // const Herosection = () => {
 //   return (

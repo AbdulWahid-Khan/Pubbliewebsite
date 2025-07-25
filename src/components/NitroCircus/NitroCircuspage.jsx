@@ -11,7 +11,7 @@ import kawai from "./../../assets/images/kawaipic.svg"
 import { GoDotFill } from "react-icons/go";
 import videopic from "./../../assets/images/videopic.svg"
 import countryicon from "./../../assets/images/countryicon.svg"
-import stateicon from "./../../assets/images/state.svg";
+import stateicon from "./../../assets/images/star.svg";
 import cityicon from "./../../assets/images/city.svg";
 import gendericon from "./../../assets/images/genderimg.svg";
 import ageicon from "./../../assets/images/ageimg.svg";
