@@ -1,62 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&display=swap');
 
 .manrope {
   font-family: "Manrope", sans-serif;
+ 
 }
-.inter {
+.inter{
   font-family: 'Inter', sans-serif;
 }
-.Dmsans {
+.Dmsans{
   font-family: 'DM Sans', sans-serif;
 }
 
+
 @import "tailwindcss";
 
+
 @theme {
-  --font-inter: 'Inter', sans-serif;
-  --font-Dmsans: 'DM Sans', sans-serif;
-  --font-manrope: 'Manrope', sans-serif;
+ 
+ --font-inter: 'Inter', sans-serif;
+ --font-Dmsans: 'DM Sans', sans-serif;
+ --font-manrope: 'Manrope', sans-serif;
+ 
 
   /* Colors */
+ 
   --color-Primary: #3579F6;
   --color-Black: #000;
-  --color-Grey: #535353;
-  --color-lightgrey: #808080;
-  --color-Navyblue: #4262FF;
-  --color-Darkgrey: #686D73; /* <- Only one definition now */
-  --color-Dunkgrey: #E5E4EC;
+  --color-Grey:#535353;
+  --color-lightgrey:#808080;
+  --color-Navyblue:  #4262FF;
+  --color-Darkgrey:#8F8F8F;
 
-  --container-width: 1380px;
 
+ --container-width: 1380px;
   /* Breakpoints */
   --breakpoint-xs: 430px;
-
-  /* Others */
+ 
+  
   --color-fill: #F00;
-
-  /* Rounded */
+  /* rounded basic  */
   --radius-primary: 20px;
   --radius-inps: 10px;
-
-  /* Shadows */
+  /* shadow  */
   --shadow-primary: 0px 4px 40px 0px rgba(0, 0, 0, 0.12);
   --shadow-sec: 0px 4px 40px 0px rgba(0, 0, 0, 0.08);
   --shadow-btn: 0px 4px 40px 0px rgba(86, 108, 251, 0.42);
   --shadow-inps: 0px 4px 40px 0px rgba(255, 255, 255, 0.15);
-
-  /* Backdrop blur */
+  /* backdrop-filter */
   --blur-main: 28px;
-
-  /* Drop Shadow */
-  --drop-shadow-primary: 0px 4px 40px rgba(86, 108, 251, 0.42);
+  /* drop shadow */
+  --drop-shadow-primary:  0px 4px 40px rgba(86, 108, 251, 0.42);
 }
-
 @layer base {
   body {
-    font-family: "Inter", sans-serif;
+    font-family: "inter", sans-serif;
+   
   }
 }
-
 @layer utilities {
   .container {
     padding: 0 16px;
@@ -67,46 +69,56 @@
     background: transparent !important;
   }
 }
-
+/* typography */
 @layer components {
-  h1 {
+  h1{
     font-size: 32px;
   }
-  h2 {
+  h2{
     font-size: 24px;
   }
-  h3 {
+  h3{
     font-size: 18px;
   }
-  h4 {
+  h4{
     font-size: 16px;
   }
 }
 
-.ant-collapse-borderless {
+.ant-collapse-borderless{
   background: transparent !important;
 }
 .ant-collapse>.ant-collapse-item {
   background: #ffffff !important;
 }
-.ant-collapse-header-text {
+
+
+.ant-collapse-header-text{
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  font-family: inter !important;
+  border: none !important;
+}
+.ant-collapse-header-text{
   font-size: 14px !important;
   font-weight: 400 !important;
   line-height: 129% !important;
-  font-family: Inter !important;
+  font-family: inter !important;
 }
-.ant-collapse>.ant-collapse-item {
-  border-radius: 26px !important;
-  padding: 22px 20px !important;
-}
+
+  .ant-collapse>.ant-collapse-item{
+    border-radius: 26px !important;
+    padding: 22px 20px ! important;
+ 
+  }
 .ant-collapse>.ant-collapse-item >.ant-collapse-header {
   padding: 0% !important;
 }
-.ant-collapse-content>.ant-collapse-content-box {
+
+.ant-collapse-content>.ant-collapse-content-box{
   padding: 0% !important;
   margin: 0% !important;
 }
-
 .marquee-wrapper {
   overflow: hidden;
   white-space: nowrap;
@@ -114,6 +126,34 @@
   width: 100%;
 }
 
-.ant-modal-root .ant-modal {
-  padding-top: 75px;
+/* .marquee-content {
+  display: inline-flex;
+  animation: marquee 10s linear infinite;
 }
+
+@keyframes marquee {
+  0% {
+    transform: translatex(0%);
+  }
+  100% {
+    transform: translatex(-100%);
+  }
+} */
+
+
+/* .navodown {
+ overflow: hidden;
+  display: flex;
+  width: 200%;
+  animation: marquee2 10s linear infinite;
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+} */
+
