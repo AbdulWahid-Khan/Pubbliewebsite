@@ -19,6 +19,7 @@ const CompaignDetails = () => {
     const navigate = useNavigate();
     const handlePost = () => {
         setIsModalOpen(false);
+        setTiktokTab(false)
         setTab(2);
         setKawaiTab(true);
         
@@ -30,7 +31,7 @@ const CompaignDetails = () => {
 
     const handleTiktokChange = () => {
         setTiktokTab(!Tiktoktab);
-        setKawaiTab(!kawaiTab);
+        setKawaiTab(false)
     };
     const handleKawaiChange = () => {
         setKawaiTab(!kawaiTab);

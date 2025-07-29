@@ -98,7 +98,7 @@ const options = {
 
     return (
         <>
-            <div className="outer flex gap-5">
+            <div className="outer flex gap-20">
                 <div className="leftpart max-w-[399px] w-full flex flex-col gap-2.5">
 
                     <div className="firstpart max-w-[357px] w-full pt-5">
@@ -188,7 +188,7 @@ const options = {
 
                 </div>
 
-                <div className="rightpart">
+                <div className="rightpart  max-w-[1250px] w-full">
                     <p className='font-inter font-bold text-lg '>Profile Stats</p>
                     <ul className="buttons flex flex-row max-w-[1920px] w-fit   justify-start items-center bg-[#FFF4EF] px-[6px] py-[4px] gap-5">
                         <button
@@ -216,7 +216,7 @@ const options = {
                     </div>
                     <div className="summary mt-6">
                         <p className='font-inter font-bold text-base'>Summary </p>
-                        <div className="grid grid-cols-3 gap-4 w-[1700px]">
+                        <div className="grid grid-cols-3 gap-4 max-w-[1700px] w-full">
                             {summary.map((item) => (
                                 <div
                                     key={item.id}
