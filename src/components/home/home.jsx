@@ -12,11 +12,12 @@ import instagrampic from "./../../assets/images/instagramicon.svg"
 import { BsArrowRightShort } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
 import { Modal, Button } from "antd";
-import { Outlet, useNavigate } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 
 
 
 const Home = () => {
+ 
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const cardData = [
@@ -98,12 +99,12 @@ const Home = () => {
 
   return (
     <>
-      <div className="home  overflow-x-hidden ">
-        <div className="relative max-w-[1740px] w-full h-[158px] mx-.5 bg-Primary ">
+      <div className="home  overflow-x-hidden   ">
+        <div className="relative max-w-[1700px] w-full h-[158px] mx-.5 bg-Primary ">
 
-          <div className="relative z-10 flex items-center h-full px-6 text-center justify-center">
+          <div className="relative flex items-center h-full px-6 text-center justify-center">
             <div
-              className="absolute inset-0   z-0 w-[200px] h-[158px]"
+              className="absolute inset-0    w-[200px] h-[158px]"
               style={{ backgroundImage: `url(${headingbg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
             ></div>
 
@@ -132,43 +133,43 @@ const Home = () => {
         </div>
 
 
-        <div className="horizontalbar flex justify-between max-w-[1740px] w-full mx-auto ">
-          <div className="p-4  flex  justify-between max-w-[500px] w-full ">
-            <p className="font-inter font-bold text-lg">Recommended Campaigns</p>
-            <ul className="flex gap-2.5">
+        <div className="horizontalbar flex flex-col sm:flex-row justify-between max-w-[1730px] w-full mx-auto ">
+          <div className="p-4  flex  justify-between max-w-[528px] w-full items-between">
+            <p className="font-inter sm:font-bold sm:text-lg pr-1 text-sm font-medium">Recommended Campaigns</p>
+            <ul className="flex gap-6  sm:gap-2.5  items-center text-xs sm:text-lg ">
               <li className="hover:cursor-pointer">
-                <a
+                <NavLink
                   to="/"
                   className={({ isActive }) =>
                     `text-center hover:cursor-pointer ${isActive ? "text-primary" : "text-gray-600"}`
                   }
                 >
                   All
-                </a>
+                </NavLink>
               </li>
               <li className="hover:cursor-pointer">
-                <a
+                <NavLink
                   to="/"
                   className={({ isActive }) =>
                     `text-center hover:cursor-pointer ${isActive ? "text-primary border-bottom border-pimary border-[1px]" : "text-gray-600"}`
                   }
                 >
                   Pubblic post
-                </a>
+                </NavLink>
               </li>
               <li className="hover:cursor-pointer">
-                <a
+                <NavLink
                   to="/"
                   className={({ isActive }) =>
                     `text-center hover:cursor-pointer ${isActive ? "text-primary" : "text-gray-600"}`
                   }
                 >
                   Affilated post
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
-          <div className="flex gap-2 bg-gray-100 px-2 items-center">
+          <div className="flex gap-2 sm:bg-gray-100 px-2 items-center justify-center  ">
             <button className="w-[41px] h-[30px] rounded-md border border-blue-400 flex items-center justify-center">
               <CiVideoOn className="w-[18px] h-[18px] text-blue-500" />
             </button>
@@ -181,11 +182,11 @@ const Home = () => {
         </div>
 
         {/* Cards for advertisements */}
-        <div className="controlling  grid  justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-between 2xl:grid-col-4 max-w-[1740px]    mx-.5   pt-2 place-items-center ">
+        <div className="controlling  grid  justify-items-center grid-cols-1  lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 items-between 2xl:grid-col-4 max-w-[1740px]    mx-.5   pt-2 place-items-center ">
 
 
           {
-            cardData.map((item) => (
+            cardData.map((item,id) => (
               <div className="main w-[284px] h-[292px] rounded-[6px]    ">
                 <div className="image relative w-[284px] h-[131px] ">
                   <img src={cardpic} alt="" className="w-full h-full" />
@@ -243,7 +244,7 @@ const Home = () => {
           closeIcon={null}
           footer={null}
           width={504}
-          style={{ marginTop: "25px" }}
+          style={{ marginTop: "100px" }}
         >
           <div className="main ">
 

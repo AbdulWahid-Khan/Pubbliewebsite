@@ -80,7 +80,7 @@ function App() {
           element: <Profile />
         },
         {
-          path: '/settings',
+          path: 'settings',
           element: <Settings />
         },
 
@@ -107,6 +107,15 @@ function App() {
     {
       path: "/campaignwithoutproduct",
       element: <CampaignWithoutProduct />,
+    },
+
+    {
+      path:"/nitrocircus",
+      element:<NitroCircuspage />
+    },
+    {
+      path:"home",
+      element:<Home/>
     }
 
 

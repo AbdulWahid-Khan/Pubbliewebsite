@@ -61,7 +61,7 @@ const Settings = () => {
                         <div className="firstpaswordfield flex gap-4 mt-7 max-w-[750px] w-full p-4.5" >
                             < RiLockUnlockLine />
                             <div className='flex max-w-[700px]  w-full '>
-                                <input type="password" name="" id="" placeholder='Enter Cuurent Password ' className='text-Darkgrey text-sm font-inter w-full outline-none' />
+                                <input type="password" name="" id="password1" placeholder='Enter Cuurent Password ' className='text-Darkgrey text-sm font-inter w-full outline-none' />
                                 <img src={passwordeye} alt="" className='w-6 h-6 hover:cursor-pointer' />
                             </div>
                         </div>
@@ -69,14 +69,14 @@ const Settings = () => {
                             <div className="firstpaswordfield flex gap-4 mt-5 max-w-[750px] w-full p-4.5" >
                                 < RiLockUnlockLine />
                                 <div className='flex max-w-[700px]  w-full '>
-                                    <input type="password" name="" id="" placeholder='Enter Cuurent Password ' className='text-Darkgrey text-sm font-inter w-full outline-none' />
+                                    <input type="password" name="" id="password2" placeholder='Enter Cuurent Password ' className='text-Darkgrey text-sm font-inter w-full outline-none' />
                                     <img src={passwordeye} alt="" className='w-6 h-6 hover:cursor-pointer' />
                                 </div>
                             </div>
                             <div className="firstpaswordfield flex gap-4 mt-5 max-w-[750px] w-full p-4.5 " >
                                 < RiLockUnlockLine />
                                 <div className='flex max-w-[700px]  w-full '>
-                                    <input type="password" name="" id="" placeholder='Enter Cuurent Password ' className='text-Darkgrey text-sm font-inter w-full outline-none' />
+                                    <input type="password" name="" id="password3" placeholder='Enter Cuurent Password ' className='text-Darkgrey text-sm font-inter w-full outline-none' />
                                     <img src={passwordeye} alt="" className='w-6 h-6 hover:cursor-pointer' />
                                 </div>
                             </div>

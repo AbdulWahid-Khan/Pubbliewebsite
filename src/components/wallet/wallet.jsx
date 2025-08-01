@@ -194,7 +194,7 @@ const Wallet = () => {
             >
             <div className='w-[244px] flex flex-col justify-self-center gap-3'>
                 <div>
-                    <img src={transimg} alt="" className='w-[244px] h-[217px]'/>
+                    <img src={transimg} alt="logo" className='w-[244px] h-[217px]'/>
                 </div>
                 <div className='flex flex-col items-center text-center '>
                     <p className='font-inter text-base font-bold '>Success!</p>
@@ -206,7 +206,7 @@ const Wallet = () => {
 
                 </div>
             </div>
-            </Modal> }
+            </Modal> 
 
 
         </>

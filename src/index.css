@@ -125,7 +125,9 @@
   display: flex;
   width: 100%;
 }
-
+.homemodal .ant-modal {
+  margin-top: 40px;
+}
 /* .marquee-content {
   display: inline-flex;
   animation: marquee 10s linear infinite;

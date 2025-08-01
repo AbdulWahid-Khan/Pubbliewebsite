@@ -42,6 +42,7 @@ const Compaigns = () => {
         setOpenDropdown(!openDropdown);
 
 
+
     };
 
     const handleDropdownClick2 = () => {
@@ -57,9 +58,9 @@ const Compaigns = () => {
             dataIndex: 'name',
             key: 'name',
             render: () => (
-                <div className="flex items-center gap-2">
+                <div className="flex items-center sm:gap-2">
                     <img src={nitroicon} alt="" />
-                    <div className="second">
+                    <div className="second hidden sm:block">
                         <p className='font-inter font-medium text-sm'>Nitro Circus 2024</p>
                         <p className='font-inter text-xs text-Darkgrey'>Public posts</p>
                     </div>
@@ -183,79 +184,89 @@ const Compaigns = () => {
 
         <>
             <div className="firstbar flex justify-between mr-5 ">
-                <div className="search flex gap-2 items-center">
-                    <IoSearchOutline className='text-Primary' />
-                    <input type="search" placeholder='search' className='text-Garkgrey text-[12px] outline-none' />
-                </div>
-                <div className="mt-6 dropdown flex  max-w-[409px] w-full justify-between ">
-                    <div className=" inline-block text-center  relative items-center">
-                        <div className="border border-gray-300 rounded text-Darkgrey text-sm font-inter">
-                            <p className="text-sm mb-1 font-medium flex items-center text-Darkgrey hover:cursor-pointer" onClick={handleDropdownClick}>Type: With product <MdOutlineKeyboardArrowDown className='' size={25} /> </p>
-                        </div>
-                        <div className={`absolute top-12 z-10 bg-white  flex flex-col gap-1 px-2.5 pt-5 pb-3.5 ${openDropdown ? 'block ' : 'hidden'}`}  >
-                            <label className="flex items-center gap-2 text-sm justify-between">All
-                                <input type="checkbox" className="form-checkbox" />
-                            </label>
-                            <label className="flex items-center gap-2 text-sm justify-between">With product
-                                <input type="checkbox" className="form-checkbox" />
-                            </label>
-                            <label className="flex items-center gap-2 text-sm justify-between">Without product
-                                <input type="checkbox" className="form-checkbox" />
-                            </label>
-                            <div className='flex justify-center items-center w-full'>
-                                <button className='w-[129px] h-[28px] bg-[rgba(0,0,0,1)] text-white rounded-[4px] font-inter font-medium text-xs '>Apply now</button>
+                <div className='flex flex-col gap-4 mt-3 sm:flex-row sm:gap-0 sm:mt-0 items-center justify-between  w-full'>
+                    <div className="search  flex gap-2 h-full items-center ">
+                        <IoSearchOutline className='text-Primary' />
+                        <input type="search" placeholder='search' className='text-Garkgrey text-[12px] outline-none' />
+                    </div>
+                    <div className="sm:mt-6 px-2 dropdown flex  gap-2 sm:flex  max-w-[409px] w-full justify-between  ">
+                        <div className=" inline-block text-center  relative items-center">
+                            <div className="border border-gray-300 rounded text-Darkgrey text-sm font-inter">
+                                <p className="text-sm mb-1 font-medium flex items-center text-Darkgrey hover:cursor-pointer" onClick={handleDropdownClick}>Type: With product <MdOutlineKeyboardArrowDown size={25} className={`transition-transform duration-300 ${openDropdown ? 'rotate-180' : 'rotate-0'}`} /> </p>
+                            </div>
+                            <div className={`absolute top-12 z-10 bg-white  flex flex-col gap-1 px-2.5 pt-5 pb-3.5 ${openDropdown ? 'block ' : 'hidden'}`}  >
+                                <label className="flex items-center gap-2 text-sm justify-between">All
+                                    <input type="checkbox" className="form-checkbox" />
+                                </label>
+                                <label className="flex items-center gap-2 text-sm justify-between">With product
+                                    <input type="checkbox" className="form-checkbox" />
+                                </label>
+                                <label className="flex items-center gap-2 text-sm justify-between">Without product
+                                    <input type="checkbox" className="form-checkbox" />
+                                </label>
+                                <div className='flex justify-center items-center w-full'>
+                                    <button className='w-[129px] h-[28px] bg-[rgba(0,0,0,1)] text-white rounded-[4px] font-inter font-medium text-xs '>Apply now</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="relative inline-block text-left">
-                        <div className="border border-gray-300 rounded  text-Darkgrey text-sm font-inter">
-                            <p className="text-sm mb-1 font-medium flex items-center hover:cursor-pointer w-full" onClick={handleDropdownClick2}>Status: All<MdOutlineKeyboardArrowDown className='' size={25} /> </p>
-                        </div>
-                        <div className={`absolute top-12 z-10 bg-white  flex flex-col gap-1 w-[129px] px-2.5 py-5   ${openDropdown2 ? 'block ' : 'hidden'}`}>
-                            <label className="flex items-center gap-2 text-sm">
-                                <input type="checkbox" className="form-checkbox" /> All
-                            </label>
-                            <label className="flex items-center gap-2 text-sm">
-                                <input type="checkbox" className="form-checkbox" /> Completed
-                            </label>
-                            <label className="flex items-center gap-2 text-sm">
-                                <input type="checkbox" className="form-checkbox" /> Pending
-                            </label>
-                            <label className="flex items-center gap-2 text-sm">
-                                <input type="checkbox" className="form-checkbox" /> Rejected
-                            </label>
-                            <button className='w-[109px] h-[28px] bg-[rgba(0,0,0,1)] text-white rounded-[4px] font-inter font-medium text-xs'>Apply now</button>
-                        </div>
-
-                    </div>
-                    <div className="relative inline-block text-left ">
-                        <div className="border border-gray-300 rounded text-Darkgrey text-sm font-inter">
-                            <p className="text-sm mb-1 font-medium flex items-center text-Darkgrey hover:cursor-pointer" onClick={handleDropdownClick3}>Periods: This year<MdOutlineKeyboardArrowDown className={`${handleDropdownClick3 ? 'rotate-180' : ''}`} size={25} /> </p>
-                        </div>
-                        <div className={`absolute top-8 z-10 bg-white flex flex-col gap-1 ${openDropdown3 ? 'block' : 'hidden'}`}>
-                            <Space size={12} direction="vertical">
-
-                                <DatePicker.RangePicker cellRender={cellRender} />
-
-                            </Space>
-                            <div className='flex justify-end pt-[330px]'>
-                                <button className='w-[95px] h-[28px] bg-[rgba(0,0,0,10)] text-white rounded-[4px] font-inter font-medium text-xs'>Apply now </button>
+                        <div className="relative inline-block text-left">
+                            <div className="border border-gray-300 rounded  text-Darkgrey text-sm font-inter">
+                                <p className="text-sm mb-1 font-medium flex items-center hover:cursor-pointer w-full" onClick={handleDropdownClick2}>Status: All<MdOutlineKeyboardArrowDown size={25} className={`transition-transform duration-300 ${openDropdown2 ? 'rotate-180' : 'rotate-0'}`} /> </p>
+                            </div>
+                            <div className={`absolute top-12 z-10 bg-white  flex flex-col gap-1 w-[129px] px-2.5 py-5   ${openDropdown2 ? 'block ' : 'hidden'}`}>
+                                <label className="flex items-center gap-2 text-sm">
+                                    <input type="checkbox" className="form-checkbox" /> All
+                                </label>
+                                <label className="flex items-center gap-2 text-sm">
+                                    <input type="checkbox" className="form-checkbox" /> Completed
+                                </label>
+                                <label className="flex items-center gap-2 text-sm">
+                                    <input type="checkbox" className="form-checkbox" /> Pending
+                                </label>
+                                <label className="flex items-center gap-2 text-sm">
+                                    <input type="checkbox" className="form-checkbox" /> Rejected
+                                </label>
+                                <button className='w-[109px] h-[28px] bg-[rgba(0,0,0,1)] text-white rounded-[4px] font-inter font-medium text-xs'>Apply now</button>
                             </div>
 
-
                         </div>
+                        <div className="relative inline-block text-left ">
+                            <div className="border border-gray-300 rounded text-Darkgrey text-sm font-inter">
+                                <p className="text-sm mb-1 font-medium flex items-center text-Darkgrey hover:cursor-pointer" onClick={handleDropdownClick3}>Periods: This year<MdOutlineKeyboardArrowDown  size={25}   className={`transition-transform duration-300 ${openDropdown3 ? 'rotate-180' : 'rotate-0'}`}  /> </p>
+                            </div>
+                            <div className={`absolute top-8 z-10 bg-white flex flex-col gap-1 ${openDropdown3 ? 'block' : 'hidden'}`}>
+                                <Space size={12} direction="vertical">
+
+                                    <DatePicker.RangePicker cellRender={cellRender} />
+
+                                </Space>
+                                <div className='flex justify-end pt-[330px]'>
+                                    <button className='w-[95px] h-[28px] bg-[rgba(0,0,0,10)] text-white rounded-[4px] font-inter font-medium text-xs'>Apply now </button>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
                     </div>
-
-
                 </div>
 
-
             </div>
-            <div className="table flex w-full pt-4 ">
-                <Table columns={columns} dataSource={data} pagination={{ position: ['bottomCenter'], }} />
-            </div>
+            <div className="w-full pt-4 overflow-x-auto px-2 sm:px-4">
+  <div className="min-w-[640px]"> {/* You can increase this as needed */}
+    <Table
+      columns={columns}
+      dataSource={data}
+      pagination={{ position: ['bottomCenter'] }}
+      scroll={{ x: 'max-content' }}
+    />
+  </div>
+</div>
+            <Outlet />
 
+            {/* Modal  */}
             <Modal
                 title={<p className='font-inter font-medium text-base text-[rgba(32,34,36,1)]'>Pick any date</p>}
                 closable={{ 'aria-label': 'Custom Close Button' }}
@@ -269,7 +280,7 @@ const Compaigns = () => {
 
 
             </Modal>
-<Outlet />
+
         </>
     )
 }
