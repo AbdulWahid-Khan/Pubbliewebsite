@@ -47,20 +47,21 @@ const Wallet = () => {
     
     return (
         <>
-            <div className="main">
-                <div className="upperportion flex justify-between">
-                    <div className="balanceportion flex max-w-[700px] max-h-[222px] h-full w-full justify-between py-[53px] px-5">
+            <div className="main ">
+                {/* <div className="upperportion bg-red-300  flex flex-col gap-6 lg:gap-0 lg:flex-row items-center    lg:justify-between ">
+                    <div className="balanceportion  flex flex-col gap-2 items-center lg:flex-row  lg:max-w-[700px] md:max-w-[350px] max-w-[250px] h-[300px] lg:max-h-[222px] h-full lg:w-full lg:justify-between lg:py-[53px] lg:px-5">
                         <p>
                             <img src={dollaricon} alt="" />
                         </p>
-                        <div className="textandbalance">
+                        <div className="textandbalance flex flex-col gap-3 w-full items-center text-center ">
                             <p className='font-inter font-medium text-lg '>Your Total Balance</p>
-                            <p className='font-inter text-sm leading-[1.28%] text-Darkgrey'>Your Power to Launch Amazing Campaigns!</p>
+                            <p className='font-inter text-sm md:leading-[1.28%] text-Darkgrey   '>Your Power to Launch Amazing Campaigns!</p>
                             <p className='font-inter font-bold text-[32px]'>$ 500</p>
                         </div>
                         <button className='w-[143px] h-[45px] bg-Primary text-white rounded-[6px] hover:cursor-pointer' onClick={showModal}>withdraw</button>
                     </div>
-                    <div className="transactions flex justify-between items-center max-w-[600px] w-full mt-[38px]">
+                   
+                    <div className="transactions  flex justify-between items-center max-w-[250px] lg:max-w-[600px] lg:w-full sm:mt-[38px]">
                         <RiArrowDropLeftLine className='hover:cursor-pointer' />
                         <div >
 
@@ -74,21 +75,21 @@ const Wallet = () => {
                         </div>
                         <RiArrowDropRightLine className='hover:cursor-pointer' />
                     </div>
-                </div>
-                <div className="transationhistory flex justify-between mt-15">
+                </div> */}
+                {/* <div className="transationhistory flex justify-between  mt-15 ">
 
-                    <div className="firstbar flex justify-between mr-5 w-full">
+                    <div className="firstbar items-center md:flex justify-between lg:p-3  md:mr-5 w-full ">
                         <p className='font-inter font-medium text-lg '>Transation history </p>
 
-                        <div className=" dropdown flex  max-w-[550px] w-full justify-between">
-                            <div className="search flex gap-2 items-center">
+                        <div className=" dropdown  flex  max-w-[550px] w-full justify-between items-center  ">
+                            <div className="search  flex gap-2 items-center h-full ">
                                 <IoSearchOutline className='text-Primary' />
-                                <input type="search" placeholder='search' className='text-Garkgrey text-[12px] ' />
+                                <input type="search" placeholder='search' className='text-Garkgrey text-[12px] outline-none p-2 md:p-3 ' />
                             </div>
-                            <div className="relative inline-block text-left ">
-                                <div className="border border-gray-300 rounded text-Darkgrey text-sm font-inter">
+                            <div className="relative  p-2 md:p-0 md:block text-left ">
+                                <div className="border border-gray-300 rounded text-Darkgrey text-sm font-inter p-2">
                                     <p className="text-sm mb-1 font-medium flex items-center text-Darkgrey cursor-pointer" onClick={handleDropdownClick} >Periods: This year<MdOutlineKeyboardArrowDown className='' size={25} /> </p>
-                                    <div className={`flex flex-col gap-1 ${openDropdown ? 'block' : 'hidden'}`}>
+                                    <div className={`flex flex-col gap-1 ${openDropdown ? 'block absolute top-16 left-0 md:top-11  ' : 'hidden'}`}>
                                         <label className="flex items-center gap-2 text-sm">
                                             <input type="checkbox" className="form-checkbox" /> All
                                         </label>
@@ -103,27 +104,27 @@ const Wallet = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* table portion */}
-                <div className="tableportion">
+                <div className="tableportion overflow-x-auto">
                     <table className='max-w-[1720px] w-full mt-5  '>
-                        <thead className='text-Darkgrey text-sm font-medium flex justify-between'>
+                        <thead className='text-Darkgrey text-sm font-medium flex justify-between text-center px-1'>
                             <th>Transaction ID</th>
                             <th>Compaign</th>
                             <th>Date</th>
                             <th>Amount</th>
                         </thead>
                         <tbody>
-                            <tr className='flex justify-between items-center '>
-                                <td className='font-inter text-sm leading-[128%]'>TXN123456	</td>
+                            <tr className='flex justify-between items-center whitespace-nowrap gap-2 text-center px-1'>
+                                <td className='font-inter text-xs md:text-sm md:leading-[128%] min-w-[100px]'>TXN123456	</td>
                                 <td className="text-center flex flex-col justify-center items-center">
-                                    <div className="flex flex-col items-center justify-center  ">
-                                        <p className="font-inter text-sm font-medium leading-[128%] text-center">Nitro Circus 2024</p>
+                                    <div className="flex flex-col items-center justify-center min-w-[100px] ">
+                                        <p className="font-inter text-xs  md:text-sm font-medium md:leading-[128%] text-center ">Nitro Circus 2024</p>
                                         <p className="text-xs font-inter text-Darkgrey text-center">Influencer Posts</p>
                                     </div>
                                 </td>
-                                <td className='font-inter  text-sm leading-[128%] text-center'>18 Jan 2025, 10:23 AM</td>
-                                <td className='text-sm text-[#2E9300]'>$ 500.00</td>
+                                <td className='font-inter text-xs  md:text-sm md:leading-[128%] text-center min-w-[100px]'>18 Jan 2025  ,10:23 AM  </td>
+                                <td className='text-sm text-[#2E9300] min-w-[100px]'>$ 500.00</td>
                             </tr>
                         </tbody>
                     </table>
@@ -182,7 +183,7 @@ const Wallet = () => {
                 </button>
  </div>
             </Modal>
-            // transation Successfull module 
+              {/* Modal 2 transanction successfull  */}
               <Modal
                 title=""
                 closable={{ 'aria-label': 'Custom Close Button' }}

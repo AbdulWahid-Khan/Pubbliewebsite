@@ -98,8 +98,9 @@ const options = {
 
     return (
         <>
-            <div className="outer flex gap-20">
-                <div className="leftpart max-w-[399px] w-full flex flex-col gap-2.5">
+            <div className="outer flex m
+            lg:gap-20 flex flex-col lg:flex-row ">
+                <div className=" leftpart max-w-[399px] w-full flex flex-col gap-2.5">
 
                     <div className="firstpart max-w-[357px] w-full pt-5">
                         <div className="flex justify-start gap-3">
@@ -188,7 +189,7 @@ const options = {
 
                 </div>
 
-                <div className="rightpart  max-w-[1250px] w-full">
+                <div className=" rightpart  max-w-[1250px] w-full">
                     <p className='font-inter font-bold text-lg '>Profile Stats</p>
                     <ul className="buttons flex flex-row max-w-[1920px] w-fit   justify-start items-center bg-[#FFF4EF] px-[6px] py-[4px] gap-5">
                         <button

@@ -64,23 +64,23 @@ const CompaignDetails = () => {
     return (
         <>
             <div className="outer bg-[rgb(246,248,249)] flex flex-col px-5 pt-24 pb-2 gap-3 ">
-                <div className="compaigndeatialnav flex justify-between items-center max-w-[1868px] w-full py-6 px-2.5 bg-white border-b-[1px] border-[rgba(239,239,239,1)]">
+                <div className="compaigndeatialnav flex flex-col md:flex-row justify-between items-center max-w-[1868px] w-full py-6 px-2.5 bg-white border-b-[1px] border-[rgba(239,239,239,1)]">
                     <p className='font-inter font-bold text-lg '>Campaign Details</p>
-                    <div className='flex gap-2 items-center text-center '>
+                    <div className='flex gap-2 items-center justify-between  '>
                         <p className='font-inter font-medium text-[rgb(158,158,158)]'>status:</p>
                         <p className='flex font-inter w-[108px] h-[35px] items-center text-center bg-[rgba(255,246,234,1)] 
            text-[rgba(255,168,0,1)] pl-3 pr-2 rounded-[21px]'>pending <span className='ml-3'><img src={pendingicon} alt="pending" /></span></p>
                     </div>
                 </div>
-                <div className="botthpart flex justify-between items-start max-w-[1868px] W-full  gap-4">
-                    <div className="leftside bg-white w-full max-w-[690px] ">
+                <div className="botthpart flex flex-col  items-center lg:flex-row  justify-between lg:items-start max-w-[1868px] W-full  gap-4">
+                    <div className="leftside   max-w-[690px] w-full">
 
                         <div className="tabnav flex justify-start gap-2 items-center max-w-[689px] h-[55px]  w-full    border-b-[1px] border-[rgba(239,239,239,1)]  pl-2.5 items-center text-center">
                             <p className={`flex font-inter font-medium text-sm cursor-pointer w-[167px] text-center px-4 py-2.5 h-full items-center  ${tab === 1 ? 'text-Primary border-b-[1px] border-Primary ' : 'text-[rgba(104,109,115,1)]'}`} onClick={() => handleTabChange(1)}> Content Submission </p>
                             <p className={`flex font-inter font-medium text-sm cursor-pointer w-[94px] h-full text-center py-2.5 px-4 items-center ${tab === 2 ? 'text-Primary border-b-[1px] border-Primary' : 'text-[rgba(104,109,115,1)]'}`} onClick={() => handleTabChange(2)}> Statistics </p>
                         </div>
 
-                        <div className='w-[690px]  p-2'>
+                        <div className='w-[690px]   p-2'>
                             <div className="tabcontent">
                                 {tab === 1 &&
                                     <div>
@@ -90,8 +90,8 @@ const CompaignDetails = () => {
                                                 <IoCheckmark />  Approved
                                             </p>
                                         </div>
-                                        <div className="maincontnet w-[647px]  flex justify-between items-center    ">
-                                            <div className="img w-[291px] h-[358px] relative">
+                                        <div className="maincontnet flex flex-col lg:w-[647px] gap-1  lg:flex-row lg:justify-between items-center    ">
+                                            <div className="img w-[291px] h-[358px] relative ">
                                                 <img
                                                     src={compaignimg}
                                                     alt="image"
@@ -103,11 +103,11 @@ const CompaignDetails = () => {
                                             </div>
 
                                             <hr className='border-[1px] border-[rgba(239,239,239,1)]   w-[1px]
-                                        h-[318px]' />
-                                            <div className='w-[276px]  h-[121px] flex flex-col gap-4  justify-center  items-center'>
+                                        h-[318px] hidden lg:block' />
+                                            <div className='w-[276px]  h-[121px] flex flex-col lg:gap-4  justify-center  items-center'>
 
 
-                                                <div className="deatilcontnet flex flex-col gap-4 pt-7 w-[276px] h-[121px]">
+                                                <div className="deatilcontnet flex flex-col gap-4 lg:pt-7 w-[276px] h-[121px]">
 
                                                     <div className="firstrow flex items-center justify-between w-full">
                                                         <p className='font-inter text-sm font-medium '>Content</p>
@@ -168,7 +168,7 @@ const CompaignDetails = () => {
                                             {kawaiTab ? "" :
 
                                                 <div className={tab == 2
-                                                    ? 'flex items-center gap-2 w-[100px] h-[32px] border-[1px]  border-[rgba(241,241,241,1)] rounded-[5px] px-2 py-1.5  hover:cursor-pointer'
+                                                    ? 'flex  items-center gap-2 w-[100px] h-[32px] border-[1px]  border-[rgba(241,241,241,1)] rounded-[5px] px-2 py-1.5  hover:cursor-pointer'
                                                     : ' rounded-[5px] px-2 py-1.5 flex items-center gap-2 w-[100px] h-[32px] bg-white hover:cursor-pointer :tab === 3 ? "hidden" : "bg-white" }'}
                                                     onClick={() => handleKawaiChange()}
                                                 >
@@ -229,7 +229,7 @@ const CompaignDetails = () => {
                                     </div>
 
                                 </div>
-                                <div className={` max-w-[654px] w-full flex justify-self-center shadow shadow  ${tab == 2 && kawaiTab == true ? "block" : "hidden"}`}><AudienceBarChart /></div>
+                                <div className={` max-w-[654px] h-[360px] lg:h-[350px] w-full flex justify-self-center shadow shadow  ${tab == 2 && kawaiTab == true ? "block " : "hidden"}`}><AudienceBarChart /></div>
 
                             </div>
 
@@ -237,7 +237,7 @@ const CompaignDetails = () => {
                         </div>
 
                     </div>
-                    <div className="rightside overflow-y-auto h-[100vh] max-w-[762px] w-full bg-white p-4 flex-col gap-4">
+                    <div className="rightside  lg:overflow-y-auto h-[100vh] max-w-[762px] w-full bg-white p-4 flex-col gap-4">
                         <NitroCircuspage />
                     </div>
                 </div>

@@ -23,7 +23,7 @@ function NitroCircuspage(className) {
     const navigate =useNavigate();
     return (
         <> 
-            <div className={`card ${className} `}>
+            <div className={` pl-3 sm:pl-0 card ${className} `}>
                 <div className="card flex flex-col lg:flex gap-4 ">
                     <div className="img">
                         <img src={Nitrocardbg} alt="" className='w-[212px] h-[212px]' />
@@ -39,7 +39,7 @@ function NitroCircuspage(className) {
                             <p className=""><img src={callendericon} alt="" /></p>
                             <p className="flex items-center gap-2 text-xs lg:text-sm ">Jan 18,25 <span> < BsArrowRightShort /></span>Jan 31,25 </p>
                         </div>
-                        <p className='font-inter text=sm leading-[128%] max-w-[903px] w-full text-Darkgrey mt-2.5 text-xs lg:text-sm w-[300px] lg:w-[660px]'>Promote our Spring Collection through Instagram Reels and Stories. Highlight discounts and limited-time offers. Showcase the product in a lively outdoor setting with natural lighting. </p>
+                        <p className='font-inter text=sm leading-[128%] max-w-[903px] w-full text-Darkgrey mt-2.5 text-xs lg:text-sm w-[300px] lg:max-w-[660px] lg:w-full'>Promote our Spring Collection through Instagram Reels and Stories. Highlight discounts and limited-time offers. Showcase the product in a lively outdoor setting with natural lighting. </p>
                     </div>
                 </div>
 
@@ -86,7 +86,7 @@ function NitroCircuspage(className) {
                                     </div>
                                     <div className="portrait flex flex-col justify-center items-start h-[150px] ">
                                         <p className="font-inter text-sm font-medium">Portrait</p>
-                                        <p className="font-inter text-sm text-Darkgrey text-center">
+                                        <p className="font-inter text-sm text-Darkgrey  md:text-center">
                                             Perfect for Instagram reels, TikTok videos, YouTube shorts
                                         </p>
                                     </div>
@@ -100,7 +100,7 @@ function NitroCircuspage(className) {
 
                 </div>
             </div>
-            <div className="audience">
+            <div className="audience pl-3 sm:pl-0">
                 <div className='text-base font-bold font-inter'>Target audience</div>
                 <div className='details '>
                     <div className='flex gap-2 pt-6'>
@@ -119,14 +119,16 @@ function NitroCircuspage(className) {
                     </div>
                 </div>
             </div>
-            <div className="guidelines mt-10">
+            <div className="guidelines mt-10 pl-3 sm:pl-0">
                 <div className='text-base font-bold font-inter'>Examples/References (optional)</div>
                 <div className='details '>
-                    <div className='flex gap-2 pt-6'>
+                    <div className='flex gap-2 pt-6 '>
                         <GoDotFill className='text-Primary' />
-                        <div>
-                            <p className='flex gap-3 items-center font-inter text-sm font-medium'> URL</p>
-                            <a className='text-xs font-inter text-Primary pt-2 hover:cursor-pointer'>Showcase the https://www.freepik.com/search?format=search&last_filter=query&last_value=all+influencer&query= </a>
+                        <div className='max'>
+                        <p className='flex gap-3 items-center font-inter text-sm font-medium'>URL</p>
+                        <a className='text-xs break-all font-inter text-Primary pt-2 hover:cursor-pointer'>
+                            Showcase the https://www.freepik.com/search?format=search&last_filter=query&last_value=all+influencer&query=
+                        </a>
                         </div>
                     </div>
                     <div className='flex gap-2 pt-6'>
@@ -139,7 +141,7 @@ function NitroCircuspage(className) {
                     </div>
                 </div>
             </div>
-            <div className="taget audience mt-10">
+            <div className="targetaudience mt-10 pl-3 sm:pl-0">
                 <div className='text-base font-bold font-inter'>Target audience</div>
                 <div className='details '>
 
@@ -186,7 +188,7 @@ function NitroCircuspage(className) {
                 </div>
             </div>
 
-            <div className="taget audience mt-10">
+            <div className="target audience mt-10 pl-3 sm:pl-0">
                 <div className='text-base font-bold font-inter'>Creative Guidelines</div>
                 <div className='details '>
 
@@ -222,8 +224,9 @@ function NitroCircuspage(className) {
 
                 </div>
             </div>
- 
-            <button className='mb-5 mt-4 p-[14px] flex justify-center text-center max-w-[538px] w-full bg-black text-white font-inter text-sm rounded-[6px] hover:cursor-pointer'  onClick={() => navigate('/nitrocircus/applynow')}>Apply for this job</button>
+                 
+            <button className='mb-5 mt-4 p-[14px]  flex justify-self-center md:justify-self-start md:justify-center text-center w-[80%]  md:max-w-[538px] md:w-full bg-black text-white font-inter text-sm rounded-[6px] hover:cursor-pointer'  onClick={() => navigate('/nitrocircus/applynow')}>Apply for this job</button>
+          
           <Outlet/>
         </>
     )

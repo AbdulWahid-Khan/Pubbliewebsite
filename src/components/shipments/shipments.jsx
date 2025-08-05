@@ -18,16 +18,16 @@ const Shipments = () => {
     return (
         <>
             <div className="main">
-                <div className="firstbar flex justify-between mr-5">
-                    <div className="search flex gap-2 items-center">
+                <div className="firstbar flex flex-col md:flex-row    justify-between md:mr-5">
+                    <div className="search flex gap-2 items-center ">
                         <IoSearchOutline className='text-Primary' />
-                        <input type="search" placeholder='search' className='text-Garkgrey text-[12px] outline-none' />
+                        <input type="search" placeholder='search' className='p-2 text-Garkgrey text-[12px] outline-none' />
                     </div>
-                    <div className=" dropdown flex  max-w-[290px] w-full justify-between">
-                        <div className="relative inline-block text-left">
-                            <div className="border border-gray-300 rounded  text-Darkgrey text-sm font-inter">
+                    <div className=" dropdown flex  md:max-w-[290px] w-full justify-between">
+                        <div className="relative  block text-left">
+                            <div className=" relative border border-gray-300 rounded  text-Darkgrey text-sm font-inter">
                                 <p className="text-sm mb-1 font-medium flex items-center hover:cursor-pointer" onClick={handleDropdownClick} >Type: AlL<MdOutlineKeyboardArrowDown className='' size={25} /> </p>
-                                <div className={`flex flex-col gap-1  ${openDropdown ? 'block' : 'hidden'}`}>
+                                <div className={`flex flex-col gap-1  ${openDropdown ? 'block absolute top-11 left-0 bg-white' : 'hidden'}`}>
                                     <label className="flex items-center gap-2 text-sm">
                                         <input type="checkbox" className="form-checkbox" /> All
                                     </label>
@@ -43,7 +43,7 @@ const Shipments = () => {
                         <div className="relative inline-block text-left ">
                             <div className="border border-gray-300 rounded text-Darkgrey text-sm font-inter">
                                 <p className="text-sm mb-1 font-medium flex items-center text-Darkgrey hover:cursor-pointer" onClick={handleDropdownClick2}>Periods: This year<MdOutlineKeyboardArrowDown className='' size={25} /> </p>
-                                <div className={`flex flex-col gap-1 ${openDropdown2 ? 'block' : 'hidden'}`}>
+                                <div className={`flex flex-col gap-1 ${openDropdown2 ? 'block absolute top-11 left-0 bg-white' : 'hidden'}`}>
                                     <label className="flex items-center gap-2 text-sm">
                                         <input type="checkbox" className="form-checkbox" /> All
                                     </label>
@@ -60,18 +60,18 @@ const Shipments = () => {
                 </div>
                 {/* table content */}
                 <table className='max-w-[1740px] w-full text-center mt-4'>
-                    <thead className="bg-gray-100">
-                        <tr>
-                            <th>ID</th>
-                            <th>Product</th>
-                            <th>Campaign</th>
-                            <th>Date of delivery</th>
-                            <th>Status</th>
-                            <th>Actions</th>
+                    <thead className="bg-gray-100 ">
+                        <tr className=''>
+                            <th className='min-w-[200px]'>ID</th>
+                            <th className='min-w-[200px]'>Product</th>
+                            <th className='min-w-[200px]'>Campaign</th>
+                            <th className='min-w-[200px]'>Date of delivery</th>
+                            <th className='min-w-[200px]'>Status</th>
+                            <th className='min-w-[200px]'>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr className='   whitespace-nowrap gap-2 text-center px-1'>
                             <td className='text-Darkgrey'>33256869</td>
                             <td className="flex gap-2 flex justify-center pb-1 items-center">
                                 <img src={lemonicon} alt="" className="w-6 h-6" />

@@ -11,7 +11,7 @@ const Applynow = () => {
     return (
         <>
             <div className="main">
-                <div className="bar flex justify-between mt-[33px]">
+                <div className="bar md:flex  px-3 lg:px-0 justify-between gap-3 mt-[33px]">
                     <p className='font-inter font-bold text-lg '>Content</p>
                     <div className='flex justify-between max-w-[550px] w-full items-center '>
                         <p className='text-sm leading-[128%] text-Darkgrey max-w-[165px] w-full'>Match with requirements </p>
@@ -24,12 +24,12 @@ const Applynow = () => {
                         <p>0%</p>
                     </div>
                 </div>
-                <div className="content flex justify-start gap-[104px]  max-w-[1740px] w-full   ">
-                    <div className="leftvideoandtext w-[278px] flex flex-col text-center h-[365px] justify-center items-center ">
+                <div className="content lg:flex justify-start lg:gap-[104px]  max-w-[1740px] w-full px-3 lg:px-0  ">
+                    <div className="leftvideoandtext mx-auto  sm:mx-0  w-[278px] flex flex-col text-center h-[365px] justify-center items-center ">
                         <img src={videoicon} alt="" />
                         <p className='text-xs leading-[170%] text-Darkgrey'>Drag & drop or upload video here!</p>
                     </div>
-                    <div className="text  w-full max-w-[526px] flex justify-center items-center">
+                    <div className="text  w-full  max-w-[526px] flex justify-center items-center">
 
                         <div className="content pl-[15px] pr-[22px] pt-[13px] py-[28px] gap-[23px] mt-[41px] max-w-[860px] w-full  ">
                             <p className='text-base font-bold font-inter'>Content Requirements</p>
@@ -53,7 +53,7 @@ const Applynow = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bottobar px-2.5 py-1.25 flex justify-between">
+                <div className="bottobar px-2.5 py-1. flex flex-col gap-2 items-center   md:flex-row md:justify-between">
 
                     <p className='text-sm font-inter leading-[128%] text-Darkgrey'>After applying for the campaign it will take a while to reviewed & further proceed</p>
                     <button className='w-[121px] h-[40px] bg-Primary rounded-[6px] text-white hover:cursor-pointer'>Submit</button>
