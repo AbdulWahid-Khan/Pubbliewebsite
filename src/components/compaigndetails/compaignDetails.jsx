@@ -80,7 +80,7 @@ const CompaignDetails = () => {
                             <p className={`flex font-inter font-medium text-sm cursor-pointer w-[94px] h-full text-center py-2.5 px-4 items-center ${tab === 2 ? 'text-Primary border-b-[1px] border-Primary' : 'text-[rgba(104,109,115,1)]'}`} onClick={() => handleTabChange(2)}> Statistics </p>
                         </div>
 
-                        <div className='w-[690px]   p-2'>
+                        <div className='md:w-[690px]   p-2'>
                             <div className="tabcontent">
                                 {tab === 1 &&
                                     <div>
@@ -133,18 +133,23 @@ const CompaignDetails = () => {
                                             <p className='font-inter font-bold text-lg '>Post Content</p>
                                             <p className='font-inter text-lg text-Darkgrey'>Your content has been approved and is now eligible for posting. </p>
                                         </div>
-                                        <div className='flex justify-between items-center max-w-[647px] w-full  py-3'>
-                                            <div className="tiktok flex  ">
+                                        <div className='outer flex flex-col  sm:flex-row sm:gap-3 justify-between items-center max-w-[647px] w-full  py-3'>
+                                             <div className='flex w-full justify-between   p-1'>
+                                            <div className="  tiktok flex  ">
                                                 <img src={tiktokimg} alt="" className='w-7 h-7 bg-white  border-[2px] border-[rgba(199,196,196,1)] rounded-[5px]' />
                                                 <p className='font-roboto text-base px-2'>Tiktok</p>
                                             </div>
-                                            <div className="end flex justify-between items-center gap-4">
+                                            <div className="  flex items-center gap-4">
                                                 <MdOutlinePending size={24} className='text-black' />
                                                 <p className='font-roboto text-base '>Pending</p>
+                                                 </div>
+                                              </div>
+                                              
                                                 <button className='w-[107px] h-[40px] bg-black text-white rounded-[6px] font-inter font-medium hover:cursor-pointer' onClick={showModal}>Post</button>
-                                            </div>
+                                           
+                                           
                                         </div>
-                                        <div className='mt-[100px] p-3 flex justify-between items-center max-w-[647px] w-full border-[1px] border-[rgba(241,241,241,1)] rounded-[10px] '>
+                                        <div className=' mt-[10px] sm:mt-[100px] p-3 flex flex-col  sm:flex-row  justify-between items-center max-w-[647px] w-full border-[1px] border-[rgba(241,241,241,1)] rounded-[10px] '>
                                             <p className='font-inter text-sm  text-Darkgrey'>Payment will be processed shortly. Make sure to complete any necessary actions before the deadline .</p>
                                             <button className='bg-Primary w-[196px] h-[40px] text-white rounded-[6px] font-inter font-medium mt-3 hover:cursor-pointer opacity-40'>Submit </button>
 
@@ -254,8 +259,8 @@ const CompaignDetails = () => {
                 onCancel={handleCancel}
 
             >
-                <div className='flex max-w-[755px] w-full  gap-4 pl-5 pr-4 pt-3' >
-                    <div className="img w-[291px] h-[442px] relative">
+                <div className='flex flex-col sm:flex-row max-w-[755px] w-full  gap-4 sm:pl-5 sm:pr-4 pt-3' >
+                    <div className="img sm:w-[291px] h-[442px] relative">
                         <img
                             src={compaignimg}
                             alt="image"
@@ -291,7 +296,7 @@ const CompaignDetails = () => {
 
                             <p className='font-inter font-medium text-sm text-lightgrey'>You can change this later by going to the menu at the top of your post.</p>
                         </div>
-                        <div className='flex justify-end items-center max-w-[400px] w-full'>
+                        <div className='flex justify-center  sm:justify-end items-center max-w-[400px] w-full'>
                         <button className='bg-Primary w-[149px] h-[40px] text-white p-3.5 rounded-[6px] font-inter font-medium text-base  mt-3 hover:cursor-pointer flex justify-center items-center' onClick={handlePost}>
                             Post now
                         </button>
