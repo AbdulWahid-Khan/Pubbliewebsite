@@ -39,7 +39,7 @@ function NitroCircuspage(className) {
                             <p className=""><img src={callendericon} alt="" /></p>
                             <p className="flex items-center gap-2 text-xs lg:text-sm ">Jan 18,25 <span> < BsArrowRightShort /></span>Jan 31,25 </p>
                         </div>
-                        <p className='font-inter text=sm leading-[128%] max-w-[903px] w-full text-Darkgrey mt-2.5 text-xs lg:text-sm w-[300px] lg:max-w-[660px] lg:w-full'>Promote our Spring Collection through Instagram Reels and Stories. Highlight discounts and limited-time offers. Showcase the product in a lively outdoor setting with natural lighting. </p>
+                        <p className='font-inter text-sm leading-[128%] max-w-[903px] w-full text-Darkgrey mt-2.5 text-xs lg:text-sm w-[280px] lg:max-w-[660px] lg:w-full'>Promote our Spring Collection through Instagram Reels and Stories. Highlight discounts and limited-time offers. Showcase the product in a lively outdoor setting with natural lighting. </p>
                     </div>
                 </div>
 
