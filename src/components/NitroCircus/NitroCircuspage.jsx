@@ -224,8 +224,11 @@ function NitroCircuspage(className) {
 
                 </div>
             </div>
-                 
-            <button className='mb-5 mt-4 p-[14px]  flex justify-self-center md:justify-self-start md:justify-center text-center w-[80%]  md:max-w-[538px] md:w-full bg-black text-white font-inter text-sm rounded-[6px] hover:cursor-pointer'  onClick={() => navigate('/nitrocircus/applynow')}>Apply for this job</button>
+
+
+ <button className='mb-5 mt-4 p-[14px]  flex justify-self-center md:justify-self-start md:justify-center text-center w-[80%]  md:max-w-[538px] md:w-full bg-black text-white font-inter text-sm rounded-[6px] hover:cursor-pointer'  onClick={() => navigate('/nitrocircus/applynow')}>Apply for this job</button>
+
+           
           
           <Outlet/>
         </>

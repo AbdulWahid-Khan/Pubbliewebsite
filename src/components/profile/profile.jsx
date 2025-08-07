@@ -98,11 +98,11 @@ const options = {
 
     return (
         <>
-            <div className="outer flex m
-            lg:gap-20 flex flex-col lg:flex-row ">
-                <div className=" leftpart max-w-[399px] w-full flex flex-col gap-2.5">
+            <div className="outer flex 
+            lg:gap-20 flex flex-col lg:flex-row ml-3 sm:sm-0 ">
+                <div className=" leftpart   max-w-[310px] sm:max-w-[399px] w-full flex flex-col gap-2.5">
 
-                    <div className="firstpart max-w-[357px] w-full pt-5">
+                    <div className="firstpart max-w-[357px] w-full ">
                         <div className="flex justify-start gap-3">
                             <img src={profilepic} alt="" className='w-[108px] h-[108px] rounded-[10px]' />
                             <div className="rightsubpart flex flex-col gap-2">
@@ -189,7 +189,7 @@ const options = {
 
                 </div>
 
-                <div className=" rightpart  max-w-[1250px] w-full">
+                <div className=" rightpart max-w-[270px] mt-4 sm:mt-0  sm:max-w-[1250px] w-full">
                     <p className='font-inter font-bold text-lg '>Profile Stats</p>
                     <ul className="buttons flex flex-row max-w-[1920px] w-fit   justify-start items-center bg-[#FFF4EF] px-[6px] py-[4px] gap-5">
                         <button
@@ -233,7 +233,7 @@ const options = {
 
 
                     </div>
-                     <div className="chart mt-50 w-[270px] h-[366px] ">
+                     <div className="chart mt-10 md:mt-50 w-[270px] h-[366px] ">
                     <p className='text-sm font-inter text-Darkgrey'>Gender </p>
                     <div className="w-[300px] h-[300px] mt-20">
                     <Doughnut data={data}  options={options}/>

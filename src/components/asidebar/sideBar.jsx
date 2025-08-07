@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import headingimg from "./../../assets/images/pubblieimgtxt.svg";
 import logouticon from "./../../assets/images/logouticon.svg";
 import { AiOutlineHome } from "react-icons/ai";
@@ -11,13 +11,19 @@ import { CgProfile } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
 
-const SideBar = ({  setsidebar }) => {
+const SideBar = ({ setsidebar }) => {
+  const [shownav, setShownav] = useState(false)
+
+  const togglenav = () => {
+    setShownav(!shownav)
+  }
+
   // Handle sidebar toggle for mobile screens
   const handleClick = () => {
     if (window.innerWidth < 640) {
       setsidebar(false); // Use setsidebar directly
-      
-      
+
+
     }
   };
 
@@ -29,41 +35,40 @@ const SideBar = ({  setsidebar }) => {
         </div>
         <div className="list flex flex-col justify-between h-full">
           <ul className="flex flex-col gap-[11px]">
-            <li className="h-full hover:cursor-pointer"  onClick={handleClick}>
+            <li className="h-full hover:cursor-pointer" onClick={handleClick}>
               <NavLink
                 to="/home"
                 className={({ isActive }) =>
-                  `flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 w-full h-full ${
-                    isActive ? "text-black bg-[rgb(245,245,245)]" : "text-[rgb(158,158,158)]"
+                  `flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 w-full h-full ${isActive ? "text-black bg-[rgb(245,245,245)]" : "text-[rgb(158,158,158)]"
                   }`
                 }
-               
+
               >
                 <AiOutlineHome size={24} />
                 Home
               </NavLink>
             </li>
-            <li className="h-full hover:cursor-pointer"  onClick={handleClick}>
+            <li className="h-full hover:cursor-pointer relative" onClick={handleClick}>
               <NavLink
                 to="/compaigns"
                 className={({ isActive }) =>
-                  `flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 w-full h-full ${
-                    isActive ? "text-black bg-[rgb(245,245,245)]" : "text-[rgb(158,158,158)]"
+                  `flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 w-full h-full ${isActive ? "text-black bg-[rgb(245,245,245)]" : "text-[rgb(158,158,158)]"
                   }`
                 }
-                onClick={handleClick}
+
               >
                 <PiSpeakerHigh size={24} />
                 <span className="font-inter text-sm">Campaigns</span>
                 <IoIosArrowForward />
+
+
               </NavLink>
             </li>
             <li className="h-full">
               <NavLink
                 to="/wallet"
                 className={({ isActive }) =>
-                  `flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 w-full h-full ${
-                    isActive ? "text-black bg-[rgb(245,245,245)]" : "text-[rgb(158,158,158)]"
+                  `flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 w-full h-full ${isActive ? "text-black bg-[rgb(245,245,245)]" : "text-[rgb(158,158,158)]"
                   }`
                 }
                 onClick={handleClick}
@@ -76,8 +81,7 @@ const SideBar = ({  setsidebar }) => {
               <NavLink
                 to="/shipments"
                 className={({ isActive }) =>
-                  `flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 w-full h-full ${
-                    isActive ? "text-black bg-[rgb(245,245,245)]" : "text-[rgb(158,158,158)]"
+                  `flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 w-full h-full ${isActive ? "text-black bg-[rgb(245,245,245)]" : "text-[rgb(158,158,158)]"
                   }`
                 }
                 onClick={handleClick}
@@ -90,8 +94,7 @@ const SideBar = ({  setsidebar }) => {
               <NavLink
                 to="/profile"
                 className={({ isActive }) =>
-                  `flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 w-full h-full ${
-                    isActive ? "text-black bg-[rgb(245,245,245)]" : "text-[rgb(158,158,158)]"
+                  `flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 w-full h-full ${isActive ? "text-black bg-[rgb(245,245,245)]" : "text-[rgb(158,158,158)]"
                   }`
                 }
                 onClick={handleClick}
@@ -104,8 +107,7 @@ const SideBar = ({  setsidebar }) => {
               <NavLink
                 to="/settings"
                 className={({ isActive }) =>
-                  `flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 w-full h-full ${
-                    isActive ? "text-black bg-[rgb(245,245,245)]" : "text-[rgb(158,158,158)]"
+                  `flex flex-row items-center gap-2.5 pl-3 pr-4.5 py-3 w-full h-full ${isActive ? "text-black bg-[rgb(245,245,245)]" : "text-[rgb(158,158,158)]"
                   }`
                 }
                 onClick={handleClick}
@@ -114,14 +116,18 @@ const SideBar = ({  setsidebar }) => {
                 Settings
               </NavLink>
             </li>
+
+
+
+           
           </ul>
-          
+
         </div>
       </div>
       <button className="flex gap-3 items-center w-full py-3 pl-3 hover:cursor-pointer">
-            <img src={logouticon} alt="Logout" />
-            Logout
-          </button>
+        <img src={logouticon} alt="Logout" />
+        Logout
+      </button>
     </div>
   );
 };
@@ -173,7 +179,7 @@ export default SideBar;
 //                                     onClick={() => handleClick()}
 //                                 >
 //                                     <AiOutlineHome size={24} />
-//                                     Home 
+//                                     Home
 //                                 </Link>
 //                             </li>
 //                             <li className="h-full hover:cursor-pointer">

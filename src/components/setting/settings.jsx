@@ -6,6 +6,18 @@ import { IoPersonOutline } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
 const Settings = () => {
     const [Tab, setTab] = useState(1)
+    const [showpasword ,setShow]= useState({
+        field1:false,
+        field2:false,
+        field3:false,
+    })
+    const handleToggle =(field)=>{
+        setShow(prev => ({
+            ...prev,
+            [field]:!prev[field]
+        }))
+
+    }
     const handleTab = () => {
         setTab(tabNumber)
     }
@@ -60,24 +72,24 @@ const Settings = () => {
                         <p>Change Password</p>
                         <div className="firstpaswordfield flex gap-4 mt-7 max-w-[750px] w-full p-4.5" >
                             < RiLockUnlockLine />
-                            <div className='flex max-w-[700px]  w-full '>
-                                <input type="password" name="" id="password1" placeholder='Enter Cuurent Password ' className='text-Darkgrey text-sm font-inter w-full outline-none' />
-                                <img src={passwordeye} alt="" className='w-6 h-6 hover:cursor-pointer' />
+                            <div className='flex max-w-[700px]  w-full  '>
+                                <input type={showpasword.field1 ? 'text' : 'password'} name="" id="password1" placeholder='Enter Cuurent Password ' className='text-Darkgrey text-sm font-inter w-full outline-none' />
+                                <img src={passwordeye} alt="" className='w-6 h-6 hover:cursor-pointer' onClick={() => handleToggle ('field1')}/>
                             </div>
                         </div>
                         <div className="secondrow flex-col lg:flex-row  justify-between  gap-16">
                             <div className="firstpaswordfield flex gap-4 mt-5 max-w-[750px] w-full p-4.5" >
                                 < RiLockUnlockLine />
                                 <div className='flex max-w-[700px]  w-full '>
-                                    <input type="password" name="" id="password2" placeholder='Enter Cuurent Password ' className='text-Darkgrey text-sm font-inter w-full outline-none' />
-                                    <img src={passwordeye} alt="" className='w-6 h-6 hover:cursor-pointer' />
+                                    <input type={showpasword.field2 ? 'text' : 'password'} name="" id="password2" placeholder='Enter Cuurent Password ' className='text-Darkgrey text-sm font-inter w-full outline-none' />
+                                    <img src={passwordeye} alt="" className='w-6 h-6 hover:cursor-pointer' onClick={()=> handleToggle ("field2")}/>
                                 </div>
                             </div>
                             <div className="firstpaswordfield flex gap-4 mt-5 max-w-[750px] w-full p-4.5 " >
                                 < RiLockUnlockLine />
                                 <div className='flex max-w-[700px]  w-full '>
-                                    <input type="password" name="" id="password3" placeholder='Enter Cuurent Password ' className='text-Darkgrey text-sm font-inter w-full outline-none' />
-                                    <img src={passwordeye} alt="" className='w-6 h-6 hover:cursor-pointer' />
+                                    <input type={showpasword.field3? "text":"password"} name="" id="password3" placeholder='Enter Cuurent Password ' className='text-Darkgrey text-sm font-inter w-full outline-none' />
+                                    <img src={passwordeye} alt="" className='w-6 h-6 hover:cursor-pointer' onClick={() => handleToggle ('field3')}/>
                                 </div>
                             </div>
 

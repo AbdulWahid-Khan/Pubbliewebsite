@@ -19,11 +19,11 @@ const Shipments = () => {
         <>
             <div className="main">
                 <div className="firstbar flex flex-col md:flex-row    justify-between md:mr-5">
-                    <div className="search flex gap-2 items-center ">
+                    <div className="search flex gap-2 pl-3 sm:pl-0  items-center ">
                         <IoSearchOutline className='text-Primary' />
                         <input type="search" placeholder='search' className='p-2 text-Garkgrey text-[12px] outline-none' />
                     </div>
-                    <div className=" dropdown flex  md:max-w-[290px] w-full justify-between">
+                    <div className=" dropdown flex  md:max-w-[290px] w-full  gap-3 sm:gap-0 pl-3 sm:pl-0 sm:justify-between">
                         <div className="relative  block text-left">
                             <div className=" relative border border-gray-300 rounded  text-Darkgrey text-sm font-inter">
                                 <p className="text-sm mb-1 font-medium flex items-center hover:cursor-pointer" onClick={handleDropdownClick} >Type: AlL<MdOutlineKeyboardArrowDown className='' size={25} /> </p>
@@ -59,10 +59,10 @@ const Shipments = () => {
                     </div>
                 </div>
                 {/* table content */}
-                <table className='max-w-[1740px] w-full text-center mt-4'>
+                <table className='max-w-[1740px] w-full mx-auto  sm:text-center mt-4'>
                     <thead className="bg-gray-100 ">
                         <tr className=''>
-                            <th className='min-w-[200px]'>ID</th>
+                            <th className='min-w-[200px] text-start sm:text-center pl-3'>ID</th>
                             <th className='min-w-[200px]'>Product</th>
                             <th className='min-w-[200px]'>Campaign</th>
                             <th className='min-w-[200px]'>Date of delivery</th>
@@ -70,9 +70,9 @@ const Shipments = () => {
                             <th className='min-w-[200px]'>Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr className='   whitespace-nowrap gap-2 text-center px-1'>
-                            <td className='text-Darkgrey'>33256869</td>
+                    <tbody className='text-end'>
+                        <tr className='   whitespace-nowrap gap-2 text-start px-1'>
+                            <td className='text-Darkgrey text-start sm:text-center pl-3'>33256869</td>
                             <td className="flex gap-2 flex justify-center pb-1 items-center">
                                 <img src={lemonicon} alt="" className="w-6 h-6" />
                                 <div><p className='text-sm font-inter font-semibold'>Face wash</p>

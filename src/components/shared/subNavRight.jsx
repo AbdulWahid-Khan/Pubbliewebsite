@@ -11,7 +11,6 @@ const SubNavRight = () => {
         <>
         <div className="rightcontent flex justify-between items-center max-w-[618px]  w-full  pr-1  ">
 
-
                     <div className=" countryname flex items-center  sm:px-3 py-2 rounded-[8px] sm:border border-Dunkgrey max-w-[148px] w-full ">
                         <img src={usaflag} alt="" className="w-5 h-5 hidden sm:block" />
                         <p className="font-inter text-xs  sm:text-[14px] sm:font-medium sm:leading-[14px] sm:px-2">Eng (USA)</p>

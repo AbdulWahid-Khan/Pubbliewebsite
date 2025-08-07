@@ -41,16 +41,19 @@ const columns = [
     title: 'Product',
     dataIndex: 'product',
     key: 'product',
+    width:100,
   },
   {
     title: 'Date',
     dataIndex: 'date',
     key: 'date',
+     width:120,
   },
   {
     title: 'Amount',
     dataIndex: 'amount',
     key: 'amount',
+     width:100,
   },
 ];
 
@@ -58,7 +61,7 @@ const columns = [
     <>
       <div>
         <div className='p-2.5 '>
-<h1 className="text-base font-inter  font-bold  my-8">Commission Details</h1>
+    <h1 className="text-base font-inter  font-bold  my-8">Commission Details</h1>
         
         <div className='flex gap-2.5 '>
             <div className='flex flex-col items-start justify-between max-w-[231px] w-full px-4 py-3.5 border-[1px] border-[rgba(241,241,241,1)] rounded-[8px]'>
@@ -72,7 +75,9 @@ const columns = [
         </div>
         <p className='font-inter font-medium text-base mt-13'>Recent Referrals </p>
         </div>
-        <div className='table max-w-[600px] w-full '><Table dataSource={dataSource} columns={columns} pagination={false} /></div>
+        <div className='table max-w-[600px] w-full '>
+          <Table dataSource={dataSource} columns={columns} pagination={false} />
+          </div>
 
 
       

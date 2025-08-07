@@ -63,18 +63,20 @@ const CampaignWithoutProduct = () => {
                     </div>
                 </div>
             ),
+            width:250,
         },
         {
             title: <p className='  font-inter text-sm'>Campaign type</p>,
             dataIndex: 'campaigntype',
             key: 'campaignType',
-
+            width:150,
         },
 
         {
             title: <p className='  font-inter text-sm'>Fee</p>,
             dataIndex: 'fee',
             key: 'fee',
+             width:150,
         },
         {
             title: <p className='  font-inter text-sm'> Status </p>,
@@ -99,17 +101,21 @@ const CampaignWithoutProduct = () => {
                         {status}
                     </div>
                 );
-            }
+            },
+             width:150,
+            
         },
         {
             title: <p className='font-semibold  font-inter text-sm'>Time line </p>,
             dataIndex: 'timeline',
             key: 'timeline',
+             width:220,
         },
         {
             title: <p className='font-semibold  font-inter text-sm'> Date applied </p>,
             dataIndex: 'date',
             key: 'date',
+             width:100,
         },
         {
             title: <p className='font-semibold  font-inter text-sm  '> Actions </p>,
@@ -130,6 +136,7 @@ const CampaignWithoutProduct = () => {
             timeline: 'Jan 18,25 --> Jan 31,25',
             date: 'Jan 18,25',
             action: <RxEyeOpen className='w-5 h-5 ml-5 hover:cursor-pointer' onClick={() => navigate('/compaigndetails')} />,
+            
         },
         {
             key: '2',
@@ -154,12 +161,12 @@ const CampaignWithoutProduct = () => {
     ];
     return (
         <>
-            <div className="firstbar flex justify-between mr-5 ">
-                <div className="search flex gap-2 items-center">
+            <div className="firstbar flex flex-col mt-5 sm:flex-row sm:mt-0 justify-between mr-5 px-4">
+                <div className="search flex gap-2 sm:gap-0 items-center">
                     <IoSearchOutline className='text-Primary' />
                     <input type="search" placeholder='search' className='text-Garkgrey text-[12px] outline-none' />
                 </div>
-                <div className="mt-6 dropdown flex  max-w-[409px] w-full justify-between ">
+                <div className="mt-6 dropdown flex gap-1 max-w-[409px] w-full justify-between ">
                     <div className=" inline-block text-center  relative items-center">
                         <div className="border border-gray-300 rounded text-Darkgrey text-sm font-inter">
                             <p className="text-sm mb-1 font-medium flex items-center text-Darkgrey hover:cursor-pointer" onClick={handleDropdownClick}>Type: With product <MdOutlineKeyboardArrowDown className='' size={25} /> </p>
@@ -224,8 +231,9 @@ const CampaignWithoutProduct = () => {
 
 
             </div>
-            <div className="table flex w-full pt-4 ">
-                <Table columns={columns} dataSource={data} pagination={{ position: ['bottomCenter'], }} />
+            <div className="table flex w-full pt-4 overflow-x-auto ">
+                <Table columns={columns} dataSource={data} pagination={{ position: ['bottomCenter'], }}
+                 scroll={{ x: "min-content" }} />
             </div>
 
         </>
